@@ -3,35 +3,16 @@
     {
       "items": [
         {
-          "blacklist": {
-            "Surface Network 2.1": true,
-            "Surface Cartography": true,
-            "Groundwater Cartography 2.1": true
-          },
           "type": "wms-getCapabilities",
-          "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-          "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-          "name": "Water (Bureau of Meteorology Geofabric)"
-        },
-        {
-          "type": "wms-getCapabilities",
-          "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
-          "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
-          "name": "Boundaries (Australia Bureau of Statistics)"
-        },
-        {
-          "type": "socrata",
-          "name": "City of Melbourne",
-          "groupBy": "category",
-          "filterQuery": ["limitTo=MAPS"],
-          "url": "https://data.melbourne.vic.gov.au"
+          "url": "http://nepanode.anl.gov/geoserver/wms",
+          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "NEPAnode"
         },
         {
           "type": "esri-mapServer-group",
-          "name": "Sunshine Coast Council (QLD)",
-          "url": "https://gisservices.scc.qld.gov.au/arcgis/rest/services"
+          "name": "National Wetlands Inventory (USFWS)",
+          "url": "http://107.20.228.18/ArcGIS/rest/services/"
         }
       ],
       "type": "group",

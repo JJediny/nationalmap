@@ -10,9 +10,9 @@
       "filterQuery": [
         "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv)"
       ],
-      "url": "http://www.data.gov.au",
+      "url": "http://www.data.gov",
       "type": "ckan",
-      "name": "Data.gov.au",
+      "name": "Data.gov",
       "includeCsv": true
     }
   ]
