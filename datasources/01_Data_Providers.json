@@ -4,19 +4,14 @@
       "items": [
         {
           "type": "wms-getCapabilities",
-          "url": "http://nepanode.anl.gov/geoserver/wms",
+          "url": "http://nepanode.anl.gov/geoserver/ows",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
           "name": "NEPAnode"
-        },
-        {
-          "type": "esri-mapServer-group",
-          "name": "National Wetlands Inventory (USFWS)",
-          "url": "http://107.20.228.18/ArcGIS/rest/services/"
         }
       ],
       "type": "group",
-      "name": "Data Providers"
+      "name": "Geonode Test"
     }
   ]
 }

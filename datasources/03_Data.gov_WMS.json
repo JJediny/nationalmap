@@ -1,0 +1,16 @@
+{
+  "catalog": [
+    {
+      "groupBy": "organization",
+      "minimumMaxScaleDenominator": 10000000000,
+      "filterByWmsGetCapabilities": false,
+      "filterQuery": [
+        "fq=+(metadata_type:geospatial%20AND%20res_format:WMS)"
+      ],
+      "url": "http://catalog.data.gov",
+      "type": "ckan",
+      "name": "Data.gov - Web Mapping Services (Geospatial Tag)",
+      "includeCsv": false
+    }
+  ]
+}
