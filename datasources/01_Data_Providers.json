@@ -8,6 +8,406 @@
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
           "name": "NEPAnode"
+        },
+        {
+          "name" : "Census [TIGER]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html"
+        },
+        {
+          "name" : "Census [US Census - TIGER]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://tigerweb.geo.census.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DHS-FEMA",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.fema.gov/DataFeeds.html"
+        },
+        {
+          "name" : "DHS-FEMA",
+          "type" : "esri-mapServer-group",
+          "url" : "https://services.femadata.com/arcgis/rest/services"
+        },
+        {
+          "name" : "DHS-FEMA",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.fema.gov/REST/services "
+        },
+        {
+          "name" : "DOC-FCC [Broadbandmap.gov]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://www.broadbandmap.gov/geoserver/web/"
+        },
+        {
+          "name" : "DOC-NOAA [NGDC]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.ncdc.noaa.gov/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [Ocean Coastal Survey - NCD]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ocs-gis.ncd.noaa.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "DOC-NOAA [National Weather Service Southeast Region]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.srh.noaa.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "DOC-NOAA [Coastal Service Center]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://csc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [National Elevation Inventory]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://www.csc.noaa.gov/ArcGISPUB/rest/services"
+        },
+        {
+          "name" : "DOC-NOAA [Multipurpose Marine Cadstre]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://egisws02.nos.noaa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [National Climate Data Center]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.ncdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [National Geophysical Data Center]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps.ngdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOD-USACE",
+          "type" : "esri-mapServer-group",
+          "url" : "http://140.194.46.50:6080/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOD-USACE",
+          "type" : "esri-mapServer-group",
+          "url" : "http://155.82.170.101:8399/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOE [Argonne National Lab - Solar]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [Bonneville Power Administration]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.bpa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [Energy Information Agency]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://eia-ms.esri.com/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOE [Energy Information Agency]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://107.22.45.173/arcgis/rest/services"
+        },
+        {
+          "name" : "DOE [Legacy Management]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gems.lm.doe.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOE [National Energy Technology Laboratory]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.netl.doe.gov/arcgis/rest/services"
+        },
+        {
+          "name" : "DOE [National Renewable Energy Laboratory]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gisatnrel.nrel.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [National Renewable Energy Laboratory]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://mapservices.nrel.gov/web/"
+        },
+        {
+          "name" : "DOEd [Education]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://54.243.190.239/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-BLM [GeoCommunicator]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://www.geocommunicator.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-BLM [ePlanning]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://gis.blm.gov/arcgis/rest/services"
+        },
+        {
+          "name" : "DOI-BLM [Landscape]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://www.landscape.blm.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-BOEM",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.boemre.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-BOEM [Ocean Energy]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://oceanenergy.boemre.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-NPS",
+          "type" : "esri-mapServer-group",
+          "url" : "http://mapservices.nps.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-NPS [IMGIS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://imgis.nps.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-NPS [Integration of Resource Management Applications]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://irmaservices.nps.gov/ArcGIS/rest/services/ "
+        },
+        {
+          "name" : "DOI-OSMRE [Office of Surface Mining]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://geomine.osmre.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USFWS [Critical Habitat]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://criticalhabitat.fws.gov/rest/services"
+        },
+        {
+          "name" : "DOI-USFWS [Environmental Conservation Online System]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ecos.fws.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-USFWS [FWSCadastral]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.fws.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "DOI-USFWS [Wetlands]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://107.20.228.18/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis1.usgs.gov/ArcGIS/rest/services/      "
+        },
+        {
+          "name" : "DOI-USGS [NHSS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://nhss.cr.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [HDDS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://hdds.usgs.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "DOI-USGS [Geology and Energy]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://certmapper.cr.usgs.gov/arcgis/rest/services"
+        },
+        {
+          "name" : "DOI-USGS [Geosciences and Environmental Change Science Center]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://rmgsc.cr.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [High Resolution Imagery]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://isse.cr.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [National Gap Analysis Program]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://dingo.gapanalysisprogram.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [The National Atlas - WMS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://webservices.nationalatlas.gov/wms/"
+        },
+        {
+          "name" : "DOI-USGS [The National Map - Basemaps]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://basemap.nationalmap.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [The National Map - Raster]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://raster.nationalmap.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "DOI-USGS [The National Map]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://services.nationalmap.gov/ArcGIS/rest/services/ "
+        },
+        {
+          "name" : "DOI-USGS [Wildfire.gov]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://wildfire.cr.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOT [Research and Innovative Technology Administration]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://rithqnwws019.rita.dot.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOT-FAA",
+          "type" : "esri-mapServer-group",
+          "url" : "http://faaservices-1551414968.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "EPA [Geodata]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://geodata.epa.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "EPA [Environmental Data Gateway]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://edg.epa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "EPA [MyEnviroment]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://map23.epa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "EPA [Office of Water]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://watersgeo.epa.gov/ArcGIS/rest/Services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps3.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://server.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps1.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://geol_bm.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://esrilabs2.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI",
+          "type" : "esri-mapServer-group",
+          "url" : "http://megacity.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Imagery]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://imagery.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Telecommunications]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://telecomtemplates.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Telecommunications2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://telecomtemplates2.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Conservation]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://conservation.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Conservation2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://conservation2.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [DOI]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps4.arcgisonline.com/ArcGIS/rest/services/DOI"
+        },
+        {
+          "name" : "ESRI [General Assets and Census Data]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://arcgis02.h-gac.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "GSA [Buildings]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services"
+        },
+        {
+          "name" : "HUD [eGIS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://egis.hud.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "The Nature Conservancy",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
+        },
+        {
+          "name" : "The Nature Conservancy",
+          "type" : "esri-mapServer-group",
+          "url" : "http://50.18.215.52/arcgis/rest/services/"
+        },
+        {
+          "name" : "The Nature Conservancy [Landscope]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.landscope.org/arcgis/rest/services/"
+        },
+        {
+          "name" : "University of Montana [Wilderness.net]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://services.cfc.umt.edu/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "USDA-NRCS [Imagery]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.apfo.usda.gov/ArcGIS/rest/services "
+        },
+        {
+          "name" : "USDA-NRCS [Easements]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gdwweb1.ftw.nrcs.usda.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "USDA [Economic Research Service]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis2.ers.usda.gov/ArcGIS/rest/services"
+        },
+        {
+          "name" : "USDA-USFS",
+          "type" : "esri-mapServer-group",
+          "url" : "http://apps.fs.fed.us/ArcX/rest/services"
+        },
+        {
+          "name" : "DOI-BLM",
+          "type" : "esri-mapServer-group",
+          "url" : "https://gis.blm.gov/arcgis/rest/services"
         }
       ],
       "type": "group",
