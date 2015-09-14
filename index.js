@@ -164,7 +164,7 @@ terria.start({
         container: ui,
         elements: [
             '<a target="_blank" href="about.html"><img src="images/datagov_logo.svg" height="50" width="200" alt="National Map" title="Version: ' + version + '" /></a>',
-            '<a target="_blank" href="http://www.gov.au/"><img src="images/AG-Rvsd-Stacked-Press.png" height="45" alt="Australian Government" /></a>'
+            '<a target="_blank" href="http://www.gov.au/"><img src="images/GSA.png" height="60" alt="United States Government" /></a>'
         ]
     });
 
