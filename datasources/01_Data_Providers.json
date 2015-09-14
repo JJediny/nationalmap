@@ -20,11 +20,6 @@
           "url" : "http://services.femadata.com/arcgis/rest/services/"
         },
         {
-          "name" : "DHS-FEMA [GIS]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis.fema.gov/REST/services/"
-        },
-        {
           "name" : "DOC-NOAA [NGDC]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.ncdc.noaa.gov/arcgis/rest/services/"
@@ -53,13 +48,6 @@
           "name" : "DOE [National Energy Technology Laboratory]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.netl.doe.gov/arcgis/rest/services/"
-        },
-        {
-          "type" : "wms-getCapabilities",
-          "url" : "https://mapservices.nrel.gov/ows",
-          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
-          "name" : "DOE [National Renewable Energy Laboratory] Geoserver"
         },
         {
           "name" : "DOEd [Education]",
@@ -135,11 +123,6 @@
           "name" : "DOI-USGS [High Resolution Imagery]",
           "type" : "esri-mapServer-group",
           "url" : "http://isse.cr.usgs.gov/ArcGIS/rest/services/"
-        },
-        {
-          "name" : "DOI-USGS [National Gap Analysis Program]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis1.usgs.gov/arcgis/rest/services/"
         },
         {
           "name" : "DOI-USGS [The National Map - Basemaps]",
