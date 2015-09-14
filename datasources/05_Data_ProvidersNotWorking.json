@@ -1,0 +1,134 @@
+{
+  "catalog": [
+    {
+      "items": [
+        {
+          "name" : "DOC-FCC [Broadbandmap.gov]",
+          "type" : "wms-getCapabilities",
+          "url" : "http://www.broadbandmap.gov/geoserver/ows",
+          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+        },
+        {
+          "name" : "DOC-NOAA [Ocean Coastal Survey - NCD]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ocs-gis.ncd.noaa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOD-USACE [1]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://140.194.46.50:6080/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOD-USACE [2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://155.82.170.101:8399/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOE [Argonne National Lab - Solar]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [Bonneville Power Administration]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.bpa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [Legacy Management]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gems.lm.doe.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOE [National Renewable Energy Laboratory]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gisatnrel.nrel.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOE [National Renewable Energy Laboratory] Geoserver",
+          "type" : "wms-getCapabilities",
+          "url" : "https://mapservices.nrel.gov/ows",
+          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+        },
+        {
+          "name" : "DOI-BLM [GeoCommunicator]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://www.geocommunicator.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [Geology and Energy]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://certmapper.cr.usgs.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [National Gap Analysis Program]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis1.usgs.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [The National Atlas - WMS]",
+          "type" : "wms-getCapabilities",
+          "url" : "http://webservices.nationalatlas.gov/wms"
+        },
+        {
+          "name" : "ESRI [General Layers 3]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps3.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [General Layers 1]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps1.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [ESRI Labs 2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://esrilabs2.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Megacity]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://megacity.esri.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [Conservation2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://conservation.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [DOI]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps4.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "ESRI [General Assets and Census Data]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://arcgis02.h-gac.com/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "GSA [Buildings]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/"
+        },
+        {
+          "name" : "HUD [eGIS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://egis.hud.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "USDA [Economic Research Service]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis2.ers.usda.gov/ArcGIS/rest/services/"
+        }
+      ],
+      "type": "group",
+      "name": "Federal Government Servers (Not Working)"
+    }
+  ]
+}
