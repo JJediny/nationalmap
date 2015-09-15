@@ -10,21 +10,6 @@
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
-          "name" : "DOC-NOAA [Ocean Coastal Survey - NCD]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://ocs-gis.ncd.noaa.gov/ArcGIS/rest/services/"
-        },
-        {
-          "name" : "DOD-USACE [1]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://140.194.46.50:6080/arcgis/rest/services/"
-        },
-        {
-          "name" : "DOD-USACE [2]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://155.82.170.101:8399/arcgis/rest/services/"
-        },
-        {
           "name" : "DOE [Argonne National Lab - Solar]",
           "type" : "esri-mapServer-group",
           "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
@@ -57,24 +42,19 @@
           "url" : "http://www.geocommunicator.gov/ArcGIS/rest/services/"
         },
         {
-          "name" : "DOI-USGS",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis.usgs.gov/ArcGIS/rest/services/"
-        },
-        {
-          "name" : "DOI-USGS [Geology and Energy]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://certmapper.cr.usgs.gov/arcgis/rest/services/"
-        },
-        {
-          "name" : "DOI-USGS [National Gap Analysis Program]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis1.usgs.gov/arcgis/rest/services/"
-        },
-        {
           "name" : "DOI-USGS [The National Atlas - WMS]",
           "type" : "wms-getCapabilities",
           "url" : "http://webservices.nationalatlas.gov/wms"
+        },
+        {
+          "name" : "EPA [MyEnvironment]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://epamap14.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "EPA [National Hydrologic Dataset (NHD) Plus]",
+          "type" : "esri-mapServer-group",
+          "url" : "hhttp://54.163.241.137/arcgis/rest/services/"
         },
         {
           "name" : "ESRI [General Layers 3]",
@@ -117,6 +97,11 @@
           "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/"
         },
         {
+          "name" : "The Nature Conservancy [LandScope 2]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.landscope.org/arcgis/rest/services/"
+        },
+        {
           "name" : "HUD [eGIS]",
           "type" : "esri-mapServer-group",
           "url" : "http://egis.hud.gov/ArcGIS/rest/services/"
@@ -128,7 +113,7 @@
         }
       ],
       "type": "group",
-      "name": "Federal Government Servers (Not Working)"
+      "name": "Federal Government Servers (No CORS Support)"
     }
   ]
 }

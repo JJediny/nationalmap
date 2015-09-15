@@ -2,17 +2,28 @@
   "services": [],
   "homeCamera": {
     "north": 56,
-    "east": -58,
+    "east": -48,
     "south": 16,
-    "west": 140
+    "west": 130
   },
   "corsDomains": [
     "corsproxy.com",
     "programs.communications.gov.au",
-    "www.asris.csiro.au",
     "mapsengine.google.com",
-    "s3-ap-southeast-2.amazonaws.com",
-    "data.melbourne.vic.gov.au",
-    "data.act.gov.au"
+    "egis.hud.gov",
+    "gis2.ers.usda.gov",
+    "broadbandmap.gov",
+    "solarmapper.anl.gov",
+    "gems.lm.doe.gov",
+    "mapservices.nrel.gov",
+    "services1.arcgis.com",
+    "gisatnrel.nrel.gov",
+    "www.geocommunicator.gov",
+    "webservices.nationalatlas.gov",
+    "conservation.arcgisonline.com",
+    "maps4.arcgisonline.com",
+    "maps1.arcgisonline.com",
+    "maps3.arcgisonline.com",
+    "esrilabs2.esri.com"
   ]
 }

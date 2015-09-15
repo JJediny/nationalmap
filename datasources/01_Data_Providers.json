@@ -10,9 +10,19 @@
           "name": "NEPAnode"
         },
         {
-          "name" : "Census [US Census - TIGER]",
+          "name" : "Census [TIGER]",
           "type" : "esri-mapServer-group",
           "url" : "http://tigerweb.geo.census.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "USDA [Economic Research Agency]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://arcgis-ersarcgism3xl-1157953884.us-east-1.elb.amazonaws.com/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [National Gap Analysis Program]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis1.usgs.gov/arcgis/rest/services/"
         },
         {
           "name" : "DHS-FEMA [Services]",
@@ -38,6 +48,16 @@
           "name" : "DOC-NOAA [National Geophysical Data Center]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.ngdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [Maritime Boundaries]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.ngdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [National Weather and River Gauges]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.srh.noaa.gov/ArcGIS/rest/services/"
         },
         {
           "name" : "DOE [Energy Information Agency]",
@@ -85,9 +105,14 @@
           "url" : "http://imgis.nps.gov/ArcGIS/rest/services/"
         },
         {
-          "name" : "DOI-NPS [Integration of Resource Management Applications]",
+          "name" : "DOI-NPS [NPScape]",
           "type" : "esri-mapServer-group",
           "url" : "http://irmaservices.nps.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI [Indian Health Services]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://gis.ihs.gov:6443/arcgis/rest/services/"
         },
         {
           "name" : "DOI-USFWS [Critical Habitat]",
@@ -135,7 +160,7 @@
           "url" : "http://raster.nationalmap.gov/ArcGIS/rest/services/"
         },
         {
-          "name" : "DOI-USGS [The National Map]",
+          "name" : "DOI-USGS [The National Map - Services]",
           "type" : "esri-mapServer-group",
           "url" : "http://services.nationalmap.gov/ArcGIS/rest/services/ "
         },
@@ -170,6 +195,16 @@
           "url" : "http://watersgeo.epa.gov/ArcGIS/rest/Services/"
         },
         {
+          "name" : "EPA [EnviroAtlas]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://enviroatlas.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "EPA [Environmental Justice]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ejscreen.epa.gov/arcgis/rest/services/"
+        },
+        {
           "name" : "ESRI [Federal Data Services]",
           "type" : "esri-mapServer-group",
           "url" : "http://server.arcgisonline.com/ArcGIS/rest/services/"
@@ -185,7 +220,12 @@
           "url" : "http://conservation2.arcgisonline.com/ArcGIS/rest/services/"
         },
         {
-          "name" : "The Nature Conservancy",
+          "name" : "HUD",
+          "type" : "esri-mapServer-group",
+          "url" : "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/"
+        },
+        {
+          "name" : "The Nature Conservancy [LandScope]",
           "type" : "esri-mapServer-group",
           "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
         },
@@ -195,9 +235,9 @@
           "url" : "http://50.18.215.52/arcgis/rest/services/"
         },
         {
-          "name" : "The Nature Conservancy [Landscope]",
+          "name" : "NASA",
           "type" : "esri-mapServer-group",
-          "url" : "http://gis.landscope.org/arcgis/rest/services/"
+          "url" : "http://ags.servirlabs.net/ArcGIS/rest/services/"
         },
         {
           "name" : "USDA-NRCS [Imagery]",

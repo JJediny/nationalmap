@@ -1,0 +1,16 @@
+{
+  "catalog": [
+    {
+      "groupBy": "organization",
+      "minimumMaxScaleDenominator": 10000000000,
+      "filterByWmsGetCapabilities": false,
+      "filterQuery": [
+        "fq=+(res_format:Esri+REST)"
+      ],
+      "url": "http://catalog.data.gov",
+      "type": "ckan",
+      "name": "Data.gov - ESRI REST Services",
+      "includeCsv": false
+    }
+  ]
+}
