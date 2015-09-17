@@ -1,16 +1,20 @@
 {
     "proxyDomains" : [
-        "nicta.com.au",
-        "gov.au",
-        "csiro.au",
-        "arcgis.com",
-        "argo.jcommops.org",
-        "www.abc.net.au",
-        "geoserver.aurin.org.au",
-        "mapsengine.google.com",
-        "s3-ap-southeast-2.amazonaws.com",
-        "adelaidecitycouncil.com",
-        "www.dptiapps.com.au"
+       "egis.hud.gov",
+       "gis2.ers.usda.gov",
+       "broadbandmap.gov",
+       "solarmapper.anl.gov",
+       "gems.lm.doe.gov",
+       "mapservices.nrel.gov",
+       "services1.arcgis.com",
+       "gisatnrel.nrel.gov",
+       "www.geocommunicator.gov",
+       "webservices.nationalatlas.gov",
+       "conservation.arcgisonline.com",
+       "maps4.arcgisonline.com",
+       "maps1.arcgisonline.com",
+       "maps3.arcgisonline.com",
+       "esrilabs2.esri.com"
     ],
     "initializationUrls" : [
         "nm"
@@ -21,9 +25,8 @@
         "googleAnalyticsKey": null,
         "googleAnalyticsOptions": null,
         "disclaimer": {
-            "text": "Disclaimer: The NationalMap must not be used for navigation or precise spatial analysis",
+            "text": "Disclaimer:  This is a test and is under continuous development - it should not be used for navigation or precise land planning or spatial analysis",
             "url": "About.html"
         }
     }
 }
-
