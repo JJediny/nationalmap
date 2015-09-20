@@ -163,8 +163,8 @@ terria.start({
     BrandBarViewModel.create({
         container: ui,
         elements: [
-            '<a target="_blank" href="about.html"><img src="images/datagov_logo.svg" height="50" width="200" alt="National Map" title="Version: ' + version + '" /></a>',
-            '<a target="_blank" href="http://data.gov"><img src="images/GSA.png" height="60" alt="United States Government" /></a>'
+            '<a target="_blank" href="about.html"><img src="images/DougN.png" height="50" width="200" alt="DougN Map" title="Version: ' + version + '" /></a>',
+            '<a target="_blank" href="https://github.com/DistributedOpenUnifiedGovernmentNetwork"><img src="images/DougN.png" height="60" alt="United States Government" /></a>'
         ]
     });
 
