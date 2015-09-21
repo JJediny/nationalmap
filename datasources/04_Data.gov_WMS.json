@@ -9,7 +9,7 @@
       ],
       "url": "http://catalog.data.gov",
       "type": "ckan",
-      "name": "Data.gov - Web Mapping Services (WMS)",
+      "name": "Data.gov API - Web Mapping Services (WMS)",
       "includeCsv": false
     }
   ]

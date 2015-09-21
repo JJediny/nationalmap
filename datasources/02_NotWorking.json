@@ -113,7 +113,7 @@
         }
       ],
       "type": "group",
-      "name": "Federal Government Servers (No CORS Support)"
+      "name": "Federal Servers - No CORS Support"
     }
   ]
 }

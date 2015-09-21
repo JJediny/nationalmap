@@ -9,7 +9,7 @@
       ],
       "url": "http://catalog.data.gov",
       "type": "ckan",
-      "name": "Data.gov - ESRI REST Services",
+      "name": "Data.gov API- ESRI REST Services",
       "includeCsv": false
     }
   ]

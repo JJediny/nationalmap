@@ -1,0 +1,31 @@
+{
+  "catalog": [
+    {
+      "items": [
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://nepanode.anl.gov/geoserver/ows",
+          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "NEPAnode"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://sedac.ciesin.columbia.edu/geoserver/wms",
+          "dataCustodian": "[NASA Socioeconomic](http://sedac.ciesin.columbia.edu/)",
+          "description": "[Socioeconomic Data and Applications Center (SEDAC)](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "NASA [Socioeconomic]"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://opengeocluster.appgeo.com/geoserver/ows",
+          "dataCustodian": "[Western Governers Association CHAT](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "WGA Critical Habitat Assessment Tool [CHAT]"
+        }
+      ],
+      "type": "group",
+      "name": "Federal Geoserver Providers"
+    }
+  ]
+}
