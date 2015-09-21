@@ -53,6 +53,11 @@
           "url" : "http://egisws02.nos.noaa.gov/ArcGIS/rest/services/"
         },
         {
+          "name" : "DOD-USACE [Army Corps]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://rsc-agisu.usace.army.mil/s1arcgis/rest/services/"
+        },
+        {
           "name" : "DOE [Energy Information Agency]",
           "type" : "esri-mapServer-group",
           "url" : "https://eia-ms.esri.com/arcgis/rest/services/"
@@ -126,6 +131,11 @@
           "name" : "DOI-USGS [HDDS]",
           "type" : "esri-mapServer-group",
           "url" : "http://hdds.usgs.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOI-USGS [National Geologic Map]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ngmdb.usgs.gov/maps/ArcGIS/rest/services/"
         },
         {
           "name" : "DOI-USGS [Geosciences and Environmental Change Science Center]",
@@ -213,7 +223,7 @@
           "url" : "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/"
         },
         {
-          "name" : "The Nature Conservancy",
+          "name" : "Nature Conservancy",
           "type" : "esri-mapServer-group",
           "url" : "http://50.18.215.52/arcgis/rest/services/"
         },

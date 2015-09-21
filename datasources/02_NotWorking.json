@@ -106,7 +106,7 @@
           "url" : "http://arcgis02.h-gac.com/ArcGIS/rest/services/"
         },
         {
-          "name" : "GSA [Buildings]",
+          "name" : "GSA [Building Inventory]",
           "type" : "esri-mapServer-group",
           "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/"
         },
