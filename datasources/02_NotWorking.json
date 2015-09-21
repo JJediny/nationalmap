@@ -3,10 +3,31 @@
     {
       "items": [
         {
-          "name" : "DOC-FCC [Broadbandmap.gov]",
           "type" : "wms-getCapabilities",
+          "name" : "DOC-FCC [Broadbandmap.gov]",
           "url" : "http://www.broadbandmap.gov/geoserver/ows",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://opengeocluster.appgeo.com/geoserver/ows",
+          "dataCustodian": "[Western Governers Association CHAT](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "WGA Critical Habitat Assessment Tool [CHAT]"
+        },
+        {
+          "type" : "wms-getCapabilities",
+          "name" : "DOE [National Renewable Energy Laboratory] Geoserver",
+          "url" : "https://mapservices.nrel.gov/ows",
+          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+        },
+        {
+          "name" : "DOI-USGS [The National Atlas - WMS]",
+          "type" : "wms-getCapabilities",
+          "url" : "http://webservices.nationalatlas.gov/wms"
+          "dataCustodian": "[USGS](http://nationalatlas.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
@@ -30,21 +51,14 @@
           "url" : "http://gisatnrel.nrel.gov/ArcGIS/rest/services/"
         },
         {
-          "name" : "DOE [National Renewable Energy Laboratory] Geoserver",
-          "type" : "wms-getCapabilities",
-          "url" : "https://mapservices.nrel.gov/ows",
-          "dataCustodian": "[US Dept of Energy](http://energy.gov)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
-        },
-        {
           "name" : "DOI-BLM [GeoCommunicator]",
           "type" : "esri-mapServer-group",
           "url" : "http://www.geocommunicator.gov/ArcGIS/rest/services/"
         },
         {
-          "name" : "DOI-USGS [The National Atlas - WMS]",
-          "type" : "wms-getCapabilities",
-          "url" : "http://webservices.nationalatlas.gov/wms"
+          "name" : "DOI [Indian Health Services]",
+          "type" : "esri-mapServer-group",
+          "url" : "https://gis.ihs.gov:6443/arcgis/rest/services/"
         },
         {
           "name" : "EPA [MyEnvironment]",
@@ -97,7 +111,17 @@
           "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/"
         },
         {
-          "name" : "The Nature Conservancy [LandScope 2]",
+          "name" : "NASA",
+          "type" : "esri-mapServer-group",
+          "url" : "http://ags.servirlabs.net/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "The Nature Conservancy [LandScope]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
+        },
+        {
+          "name" : "Nature Conservancy [LandScope 2]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.landscope.org/arcgis/rest/services/"
         },
@@ -113,7 +137,7 @@
         }
       ],
       "type": "group",
-      "name": "Federal Servers - No CORS Support"
+      "name": "Federal Servers - Not Working CORS Support"
     }
   ]
 }

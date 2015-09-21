@@ -20,6 +20,7 @@ setup(
 	install_requires=[],
 	entry_points=\
 	"""
+	Copy and Paste this section into CKAN .ini file (/etc/ckan/default/development.ini)
         [ckan.plugins]
 	cesium_viewer=ckanext.cesiumpreview.plugin:CesiumPreview
 	""",

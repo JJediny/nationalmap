@@ -28,11 +28,6 @@
           "url" : "http://gis.ncdc.noaa.gov/arcgis/rest/services/"
         },
         {
-          "name" : "DOC-NOAA [Multipurpose Marine Cadstre]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://egisws02.nos.noaa.gov/ArcGIS/rest/services/"
-        },
-        {
           "name" : "DOC-NOAA [National Climate Data Center]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.ncdc.noaa.gov/arcgis/rest/services/"
@@ -51,6 +46,11 @@
           "name" : "DOC-NOAA [National Weather and River Gauges]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis.srh.noaa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name" : "DOC-NOAA [Multipurpose Marine Cadstre]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://egisws02.nos.noaa.gov/ArcGIS/rest/services/"
         },
         {
           "name" : "DOE [Energy Information Agency]",
@@ -101,11 +101,6 @@
           "name" : "DOI-NPS [NPScape]",
           "type" : "esri-mapServer-group",
           "url" : "http://irmaservices.nps.gov/ArcGIS/rest/services/"
-        },
-        {
-          "name" : "DOI [Indian Health Services]",
-          "type" : "esri-mapServer-group",
-          "url" : "https://gis.ihs.gov:6443/arcgis/rest/services/"
         },
         {
           "name" : "DOI-USFWS [Critical Habitat]",
@@ -218,19 +213,9 @@
           "url" : "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/"
         },
         {
-          "name" : "The Nature Conservancy [LandScope]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
-        },
-        {
           "name" : "The Nature Conservancy",
           "type" : "esri-mapServer-group",
           "url" : "http://50.18.215.52/arcgis/rest/services/"
-        },
-        {
-          "name" : "NASA",
-          "type" : "esri-mapServer-group",
-          "url" : "http://ags.servirlabs.net/ArcGIS/rest/services/"
         },
         {
           "name" : "USDA-NRCS [Imagery]",
