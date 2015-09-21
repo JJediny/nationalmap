@@ -228,6 +228,16 @@
           "url" : "http://gdwweb1.ftw.nrcs.usda.gov/arcgis/rest/services/"
         },
         {
+          "name" : "Nature Conservancy [LandScope]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://gis.landscope.org/arcgis/rest/services/"
+        },
+        {
+          "name" : "HUD [eGIS]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://egis.hud.gov/ArcGIS/rest/services/"
+        },
+        {
           "name" : "USDA-USFS",
           "type" : "esri-mapServer-group",
           "url" : "http://apps.fs.fed.us/ArcX/rest/services/"

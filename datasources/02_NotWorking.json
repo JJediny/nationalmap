@@ -121,16 +121,6 @@
           "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
         },
         {
-          "name" : "Nature Conservancy [LandScope 2]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis.landscope.org/arcgis/rest/services/"
-        },
-        {
-          "name" : "HUD [eGIS]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://egis.hud.gov/ArcGIS/rest/services/"
-        },
-        {
           "name" : "USDA [Economic Research Service]",
           "type" : "esri-mapServer-group",
           "url" : "http://gis2.ers.usda.gov/ArcGIS/rest/services/"
