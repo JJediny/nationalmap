@@ -24,6 +24,20 @@
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
+          "type": "wms-getCapabilities",
+          "url": "http://geonode.state.gov/geoserver/ows",
+          "dataCustodian": "[U.S. State Department - Humanitarian Information Unit](http://geonode.state.gov)",
+          "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "State Department - Humanitarian Information Unit"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://geonode.wfp.org/geoserver/ows",
+          "dataCustodian": "[World Food Program](http://geonode.wfp.org)",
+          "description": "[License](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "World Food Program"
+        },
+        {
           "name" : "DOE [Argonne National Lab - Solar]",
           "type" : "esri-mapServer-group",
           "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
