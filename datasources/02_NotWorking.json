@@ -24,13 +24,6 @@
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
-          "name" : "DOI-USGS [The National Atlas - WMS]",
-          "type" : "wms-getCapabilities",
-          "url" : "http://webservices.nationalatlas.gov/wms"
-          "dataCustodian": "[USGS](http://nationalatlas.gov)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
-        },
-        {
           "name" : "DOE [Argonne National Lab - Solar]",
           "type" : "esri-mapServer-group",
           "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
