@@ -248,6 +248,16 @@
           "url" : "http://egis.hud.gov/ArcGIS/rest/services/"
         },
         {
+          "name" : "USGS [FGDC Common]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://commons.wim.usgs.gov/arcgis/rest/services/"
+        },
+        {
+          "name" : "NOAA [Coastal Flooding]",
+          "type" : "esri-mapServer-group",
+          "url" : "http://maps1.coast.noaa.gov/arcgis/rest/services/"
+        },        
+        {
           "name" : "USDA-USFS",
           "type" : "esri-mapServer-group",
           "url" : "http://apps.fs.fed.us/ArcX/rest/services/"
