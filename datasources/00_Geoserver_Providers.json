@@ -14,8 +14,15 @@
           "url": "http://107.21.245.18/geoserver/ows",
           "dataCustodian": "[CDC National Disease Map Website](http://diseasemaps.usgs.gov/mapviewer/)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "CDC National Disease Map"
-        },        
+          "name": "CDC [National Disease Map]"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://cida.usgs.gov/DSASweb/geoserver/ows",
+          "dataCustodian": "[NOAA Coastal Change Harzard Portal](http://marine.usgs.gov/coastalchangehazardsportal)",
+          "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "NOAA [Coastal Change Harzard Portal]"
+        },
         {
           "type": "wms-getCapabilities",
           "url": "http://sedac.ciesin.columbia.edu/geoserver/wms",
