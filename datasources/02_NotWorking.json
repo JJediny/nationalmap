@@ -4,21 +4,21 @@
       "items": [
         {
           "type": "wms-getCapabilities",
-          "url": "http://107.21.245.18/geoserver/ows",
+          "url": "http://107.21.245.18/geoserver/wms",
           "dataCustodian": "[CDC National Disease Map Website](http://diseasemaps.usgs.gov/mapviewer/)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
           "name": "CDC [National Disease Map]"
         },
         {
           "type": "wms-getCapabilities",
-          "url": "http://cida.usgs.gov/DSASweb/geoserver/ows",
+          "url": "http://cida.usgs.gov/DSASweb/geoserver/wms",
           "dataCustodian": "[USGS Coastal Change Harzard Portal](http://marine.usgs.gov/coastalchangehazardsportal)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
           "name": "USGS [Coastal Change Harzard Portal]"
         },
         {
           "type": "wms-getCapabilities",
-          "url": "http://cida.usgs.gov/ngwmn/geoserver/ows",
+          "url": "http://cida.usgs.gov/ngwmn/geoserver/wms",
           "dataCustodian": "[USGS National Ground-Water Monitoring Network](http://cida.usgs.gov/ngwmn/index.jsp)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
           "name": "USGS [National Ground-Water Monitoring Network]"
@@ -26,13 +26,13 @@
         {
           "type" : "wms-getCapabilities",
           "name" : "DOC-FCC [Broadbandmap.gov]",
-          "url" : "http://www.broadbandmap.gov/geoserver/ows",
+          "url" : "http://www.broadbandmap.gov/geoserver/wms",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
           "type": "wms-getCapabilities",
-          "url": "http://opengeocluster.appgeo.com/geoserver/ows",
+          "url": "http://opengeocluster.appgeo.com/geoserver/wms",
           "dataCustodian": "[Western Governers Association CHAT](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
           "name": "WGA Critical Habitat Assessment Tool [CHAT]"
@@ -40,20 +40,20 @@
         {
           "type" : "wms-getCapabilities",
           "name" : "DOE [National Renewable Energy Laboratory] Geoserver",
-          "url" : "https://mapservices.nrel.gov/ows",
+          "url" : "https://mapservices.nrel.gov/wms",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
         },
         {
           "type": "wms-getCapabilities",
-          "url": "http://geonode.state.gov/geoserver/ows",
+          "url": "http://geonode.state.gov/geoserver/wms",
           "dataCustodian": "[U.S. State Department - Humanitarian Information Unit](http://geonode.state.gov)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
           "name": "State Department - Humanitarian Information Unit"
         },
         {
           "type": "wms-getCapabilities",
-          "url": "http://geonode.wfp.org/geoserver/ows",
+          "url": "http://geonode.wfp.org/geoserver/wms",
           "dataCustodian": "[World Food Program](http://geonode.wfp.org)",
           "description": "[License](http://creativecommons.org/licenses/by/3.0/)",
           "name": "World Food Program"
