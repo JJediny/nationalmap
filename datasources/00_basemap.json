@@ -1,0 +1,26 @@
+{
+  "catalog": [
+    {
+      "items": [
+        {
+          "type": "wms-getCapabilities",
+          "url": "",
+          "dataCustodian": "[Distributed Open Unified Government Network](https://github.com/DistributedOpenUnifiedGovernmentNetwork)",
+          "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "Test WMS Basemap"
+          "thumbnailUrl": ""          
+          "isBasemap": "True"
+        },
+        {
+          "type": "wms-getCapabilities",
+          "url": "http://sedac.ciesin.columbia.edu/geoserver/wms",
+          "dataCustodian": "[NASA Socioeconomic](http://sedac.ciesin.columbia.edu/)",
+          "description": "[Socioeconomic Data and Applications Center (SEDAC)](http://creativecommons.org/licenses/by/3.0/)",
+          "name": "NASA [Socioeconomic Data and Applications Center]"
+        }
+      ],
+      "type": "group",
+      "name": "Basemaps"
+    }
+  ]
+}
