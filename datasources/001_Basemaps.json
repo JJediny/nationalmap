@@ -12,11 +12,11 @@
           "isBasemap": "True"
         },
         {
-          "type": "wms-getCapabilities",
-          "url": "http://sedac.ciesin.columbia.edu/geoserver/wms",
-          "dataCustodian": "[NASA Socioeconomic](http://sedac.ciesin.columbia.edu/)",
-          "description": "[Socioeconomic Data and Applications Center (SEDAC)](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "NASA [Socioeconomic Data and Applications Center]"
+          "url": "http://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer",
+          "dataCustodian": "[USGS Basemaps](http://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer)",
+          "description": "USGS Topo is a topographic tile cache base map that combines the most current data (Boundaries, Names, Transportation, Elevation, Hydrography, Land Cover, and other themes) that make up The National Map.",
+          "type": "esri-mapServer",
+          "name": "USGS Topo"
         }
       ],
       "type": "group",
