@@ -1,6 +1,7 @@
 {
   "name": "nationalmap",
   "version": "0.0.6",
+  "engine": "node 0.10.38",
   "description": "Geospatial visualization application for Australian government and open data.",
   "repository": {
     "type": "git",
