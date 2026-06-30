@@ -7,8 +7,8 @@
           "url": "",
           "dataCustodian": "[Distributed Open Unified Government Network](https://github.com/DistributedOpenUnifiedGovernmentNetwork)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "Test WMS Basemap"
-          "thumbnailUrl": ""          
+          "name": "Test WMS Basemap",
+          "thumbnailUrl": "",          
           "isBasemap": "True"
         },
         {

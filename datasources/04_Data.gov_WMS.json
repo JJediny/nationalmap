@@ -1,16 +1,3 @@
 {
-  "catalog": [
-    {
-      "groupBy": "organization",
-      "minimumMaxScaleDenominator": 10000000000,
-      "filterByWmsGetCapabilities": false,
-      "filterQuery": [
-        "fq=+(res_format:WMS%20OR%20res_format:WMS)"
-      ],
-      "url": "http://catalog.data.gov",
-      "type": "ckan",
-      "name": "Data.gov API - Web Mapping Services (WMS)",
-      "includeCsv": false
-    }
-  ]
+  "catalog": []
 }

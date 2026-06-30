@@ -31,8 +31,11 @@ export default function UserInterface(props) {
   return (
     <StandardUserInterface {...props} version={version}>
       <MenuLeft>
-        <MenuItem caption="About" href="about.html" key="about-link" />
-        <RelatedMaps viewState={props.viewState} />
+        <MenuItem
+          caption="About"
+          href="https://github.com/DistributedOpenUnifiedGovernmentNetwork"
+          key="about-link"
+        />
       </MenuLeft>
       <ExperimentalMenu>
         {/* <If condition={isBrowserSupportedAV()}>

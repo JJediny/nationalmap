@@ -4,364 +4,175 @@
       "items": [
         {
           "name": "Census [TIGER]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://tigerweb.geo.census.gov/ArcGIS/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "USDA [Economic Research Agency]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gisportal.ers.usda.gov/server/rest/services/",
           "status": "replaced",
           "notes": "ERS migrated to ArcGIS Enterprise (v12). gisportal.ers.usda.gov"
         },
         {
           "name": "DOI-USGS [National Gap Analysis Program]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://services.arcgis.com/v01gqwM5QqNysAAi/ArcGIS/rest/services/",
           "status": "replaced",
           "notes": "PAD-US data moved to ArcGIS Online. Also PAD-US Data Explorer at maps.usgs.gov/padusdataexplorer/"
         },
         {
           "name": "DHS-FEMA [Services]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gis.fema.gov/arcgis/rest/services/",
           "status": "replaced",
           "notes": "FEMA migrated to gis.fema.gov (v11.5). NFHL at hazards.fema.gov. Old endpoint HTTP 410"
         },
         {
           "name": "DOC-NOAA [NGDC]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://gis.ncdc.noaa.gov/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "DOC-NOAA [National Climate Data Center]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://gis.ncdc.noaa.gov/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "DOC-NOAA [National Geophysical Data Center]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://gis.ngdc.noaa.gov/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "DOC-NOAA [Maritime Boundaries]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://gis.ngdc.noaa.gov/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "DOC-NOAA [National Weather and River Gauges]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://mapservices.weather.noaa.gov/eventdriven/rest/services/",
           "status": "replaced",
           "notes": "NWS migrated to mapservices.weather.noaa.gov (v11.3). River gauges under water/"
         },
         {
           "name": "DOC-NOAA [Multipurpose Marine Cadstre]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/",
           "status": "replaced",
           "notes": "Moved to coast.noaa.gov ArcGIS Server (v11.5). Also hub.marinecadastre.gov"
         },
         {
-          "name": "DOD-USACE [Army Corps]",
-          "type": "esri-mapServer-group",
-          "url": "https://geospatial-usace.opendata.arcgis.com/",
-          "status": "replaced",
-          "notes": "USACE moved to ArcGIS Hub. Also geospatial.sec.usace.army.mil/server/"
-        },
-        {
-          "name": "DOE [Energy Information Agency]",
-          "type": "esri-mapServer-group",
-          "url": "https://atlas.eia.gov/",
-          "status": "replaced",
-          "notes": "EIA moved to atlas.eia.gov (US Energy Atlas, ArcGIS Hub)"
-        },
-        {
           "name": "DOE [National Energy Technology Laboratory]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://arcgis.netl.doe.gov/server/rest/services/",
           "status": "replaced",
           "notes": "NETL migrated to arcgis.netl.doe.gov (v11.x)"
         },
         {
-          "name": "DOEd [Education]",
-          "type": "esri-mapServer-group",
-          "url": "http://54.243.190.239/ArcGIS/rest/services/",
-          "status": "dead",
-          "notes": "No public ArcGIS server found for Department of Education"
-        },
-        {
           "name": "DOI-BLM [ePlanning]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gis.blm.gov/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
           "name": "DOI-BLM [Landscape]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gis.blm.gov/arcgis/rest/services/",
           "status": "merged",
           "notes": "Consolidated into main BLM GIS at gis.blm.gov"
         },
         {
           "name": "DOI-BOEM",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gis.boem.gov/arcgis/rest/services/",
           "status": "replaced",
           "notes": "Moved from boemre.gov to boem.gov (v11.3)"
         },
         {
           "name": "DOI-BOEM [Ocean Energy]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://gis.boem.gov/arcgis/rest/services/",
           "status": "merged",
           "notes": "Merged into BOEM main GIS at gis.boem.gov"
         },
         {
           "name": "DOI-NPS",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://mapservices.nps.gov/arcgis/rest/services/",
           "status": "https-upgrade",
           "notes": "HTTPS works (v11.5). Upgrade from HTTP"
         },
         {
           "name": "DOI-NPS [IMGIS]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://mapservices.nps.gov/arcgis/rest/services/",
           "status": "merged",
           "notes": "Consolidated into mapservices.nps.gov"
         },
         {
           "name": "DOI-NPS [NPScape]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://irmaservices.nps.gov/arcgis/rest/services/",
           "status": "https-upgrade",
           "notes": "HTTPS works (v11.5). Upgrade from HTTP"
         },
         {
           "name": "DOI-USFWS [Critical Habitat]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://services.arcgis.com/QVENGdaPbd4LUkLV/ArcGIS/rest/services/USFWS_Critical_Habitat/FeatureServer",
           "status": "replaced",
           "notes": "Moved to ArcGIS Online"
         },
         {
-          "name": "DOI-USFWS [Environmental Conservation Online System]",
-          "type": "esri-mapServer-group",
-          "url": "http://ecos.fws.gov/arcgis/rest/services/",
-          "status": "dead",
-          "notes": "ecos.fws.gov website functions but no public ArcGIS REST endpoint"
-        },
-        {
-          "name": "DOI-USFWS [FWSCadastral]",
-          "type": "esri-mapServer-group",
-          "url": "http://gis.fws.gov/ArcGIS/rest/services/",
-          "status": "dead",
-          "notes": "HTTP 502. No replacement public endpoint found"
-        },
-        {
           "name": "DOI-USFWS [Wetlands]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://fwsprimary.wim.usgs.gov/server/rest/services/",
           "status": "replaced",
           "notes": "Wetlands data moved to fwsprimary.wim.usgs.gov (v10.81). Wetlands, Riparian, HUC services"
         },
         {
-          "name": "DOI-USGS [HDDS]",
-          "type": "esri-mapServer-group",
-          "url": "http://hdds.usgs.gov/ArcGIS/rest/services/",
-          "status": "dead",
-          "notes": "HTTP 403. Replaced by hddsexplorer.usgs.gov web app. No public REST endpoint"
-        },
-        {
           "name": "DOI-USGS [National Geologic Map]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://services1.arcgis.com/ypdMhhEhrtBXLtQv/ArcGIS/rest/services/USGS_Geology/FeatureServer",
           "status": "replaced",
           "notes": "NGMDB migrating. Geologic map data on AGOL"
         },
         {
-          "name": "DOI-USGS [Geosciences and Environmental Change Science Center]",
-          "type": "esri-mapServer-group",
-          "url": "http://rmgsc.cr.usgs.gov/ArcGIS/rest/services/",
-          "status": "dead",
-          "notes": "HTTP 500. File downloads at rmgsc.cr.usgs.gov/outgoing/ but no active REST endpoint"
-        },
-        {
-          "name": "DOI-USGS [High Resolution Imagery]",
-          "type": "esri-mapServer-group",
-          "url": "https://imagery.nationalmap.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "High res imagery moved to imagery.nationalmap.gov (v11.3). USGSNAIPImagery, USGSNAIPPlus"
-        },
-        {
-          "name": "DOI-USGS [The National Map - Basemaps]",
-          "type": "esri-mapServer-group",
-          "url": "http://basemap.nationalmap.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOI-USGS [The National Map - Raster]",
-          "type": "esri-mapServer-group",
-          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "Raster basemap services moved to basemap.nationalmap.gov (v11.3)"
-        },
-        {
-          "name": "DOI-USGS [The National Map - Services]",
-          "type": "esri-mapServer-group",
-          "url": "https://carto.nationalmap.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "Vector services moved to carto.nationalmap.gov (v11.3). Contours, geonames, govunits, structures"
-        },
-        {
-          "name": "DOI-USGS [Wildfire.gov]",
-          "type": "esri-mapServer-group",
-          "url": "https://portal.wildfire.gov/egp/",
-          "status": "replaced",
-          "notes": "Wildfire data migrated to Wildfire EGP portal. Also AGOL at services.arcgis.com/jIL9msH9OI208GCb"
-        },
-        {
-          "name": "DOT [Research and Innovative Technology Administration]",
-          "type": "esri-mapServer-group",
-          "url": "https://geo.dot.gov/server/rest/services/",
-          "status": "replaced",
-          "notes": "DOT consolidated to geo.dot.gov (v11.5). Also fragis.fra.dot.gov for FRA"
-        },
-        {
-          "name": "EPA [Geodata]",
-          "type": "esri-mapServer-group",
-          "url": "https://edg.epa.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "Consolidated into EPA Environmental Dataset Gateway (EDG) (v11.4)"
-        },
-        {
-          "name": "EPA [Environmental Data Gateway]",
-          "type": "esri-mapServer-group",
-          "url": "https://edg.epa.gov/ArcGIS/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "EPA [MyEnviroment]",
-          "type": "esri-mapServer-group",
-          "url": "https://edg.epa.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "MyEnvironment decommissioned. Services merged into EDG"
-        },
-        {
-          "name": "EPA [Office of Water]",
-          "type": "esri-mapServer-group",
-          "url": "https://watersgeo.epa.gov/ArcGIS/rest/services/",
-          "status": "https-upgrade",
-          "notes": "HTTPS works (v11.3). WATERS, NHDPlus, OW services available"
-        },
-        {
-          "name": "EPA [EnviroAtlas]",
-          "type": "esri-mapServer-group",
-          "url": "https://enviroatlas.epa.gov/arcgis/rest/services/",
-          "status": "https-upgrade",
-          "notes": "HTTPS works (v11.3). Also enviroatlas-epa.hub.arcgis.com"
-        },
-        {
-          "name": "EPA [Environmental Justice]",
-          "type": "esri-mapServer-group",
-          "url": "https://edg.epa.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "EJSCREEN data merged into EDG. Domain dead (NXDOMAIN)"
-        },
-        {
-          "name": "ESRI [Federal Data Services]",
-          "type": "esri-mapServer-group",
-          "url": "http://server.arcgisonline.com/ArcGIS/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "ESRI [Imagery]",
-          "type": "esri-mapServer-group",
-          "url": "https://services.arcgisonline.com/ArcGIS/rest/services/",
-          "status": "replaced",
-          "notes": "Imagery consolidated into services.arcgisonline.com. World_Imagery available"
-        },
-        {
-          "name": "ESRI [Conservation]",
-          "type": "esri-mapServer-group",
-          "url": "http://conservation2.arcgisonline.com/ArcGIS/rest/services/",
-          "status": "dead",
-          "notes": "ESRI Conservation public server discontinued. Program now provides software grants"
-        },
-        {
           "name": "HUD",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/",
           "status": "live",
           "notes": "Verified live on original URL"
         },
         {
-          "name": "Nature Conservancy",
-          "type": "esri-mapServer-group",
-          "url": "https://tnc.maps.arcgis.com/",
-          "status": "replaced",
-          "notes": "Moved to TNC ArcGIS Online organization"
-        },
-        {
-          "name": "USDA-NRCS [Imagery]",
-          "type": "esri-mapServer-group",
-          "url": "https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "NRCS geoservices. Also APFO at gis.apfo.usda.gov via HTTPS still works"
-        },
-        {
-          "name": "USDA-NRCS [Easements]",
-          "type": "esri-mapServer-group",
-          "url": "https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "NRCS GDG decommissioned Mar 2026. Merged into main NRCS geoservices"
-        },
-        {
-          "name": "Nature Conservancy [LandScope]",
-          "type": "esri-mapServer-group",
-          "url": "https://geohub-natureserve.opendata.arcgis.com/",
-          "status": "replaced",
-          "notes": "Data moved to NatureServe ArcGIS Open Data Hub"
-        },
-        {
           "name": "HUD [eGIS]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://egis.hud.gov/arcgis/rest/services/",
           "status": "https-upgrade",
           "notes": "HTTPS works (v10.71). Folders: affh, affht, cart, cpdmaps, gotit, hrl, opendata, pmt, tdat"
         },
         {
-          "name": "DOI-USGS [Federal Geographic Data Committee]",
-          "type": "esri-mapServer-group",
-          "url": "http://commons.wim.usgs.gov/arcgis/rest/services/",
-          "status": "dead",
-          "notes": "commons.wim.usgs.gov dead. FGDC services discontinued"
-        },
-        {
           "name": "DOC-NOAA [Coastal Flooding]",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/",
           "status": "replaced",
           "notes": "Coastal flooding data moved to coast.noaa.gov (v11.5). CFEM Flood Hazard Composite"
         },
         {
           "name": "USDA-USFS",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "url": "https://apps.fs.usda.gov/arcx/rest/services/",
           "status": "replaced",
           "notes": "USFS migrated from .fed.us to .usda.gov. Also fsgisx01, fsgisx02 servers"
