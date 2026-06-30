@@ -1,7 +1,7 @@
 {
   "catalog": [
     {
-      "items": [
+      "members": [
         {
           "name": "Census [TIGER]",
           "type": "esri-group",
