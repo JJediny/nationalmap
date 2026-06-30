@@ -7,151 +7,205 @@
           "url": "http://107.21.245.18/geoserver/wms",
           "dataCustodian": "[CDC National Disease Map Website](http://diseasemaps.usgs.gov/mapviewer/)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "CDC [National Disease Map]"
+          "name": "CDC [National Disease Map]",
+          "status": "dead",
+          "notes": "IP-based endpoint unreachable — connection refused"
         },
         {
           "type": "wms-getCapabilities",
           "url": "http://cida.usgs.gov/DSASweb/geoserver/wms",
           "dataCustodian": "[USGS Coastal Change Harzard Portal](http://marine.usgs.gov/coastalchangehazardsportal)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "USGS [Coastal Change Harzard Portal]"
+          "name": "USGS [Coastal Change Harzard Portal]",
+          "status": "dead",
+          "notes": "HTTP 404 — DSASweb geoserver path no longer available"
         },
         {
           "type": "wms-getCapabilities",
           "url": "http://cida.usgs.gov/ngwmn/geoserver/wms",
           "dataCustodian": "[USGS National Ground-Water Monitoring Network](http://cida.usgs.gov/ngwmn/index.jsp)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "USGS [National Ground-Water Monitoring Network]"
+          "name": "USGS [National Ground-Water Monitoring Network]",
+          "status": "live",
+          "notes": "WMS responds with GetCapabilities; HTTPS also alive"
         },
         {
-          "type" : "wms-getCapabilities",
-          "name" : "DOC-FCC [Broadbandmap.gov]",
-          "url" : "http://www.broadbandmap.gov/geoserver/wms",
+          "type": "wms-getCapabilities",
+          "name": "DOC-FCC [Broadbandmap.gov]",
+          "url": "http://www.broadbandmap.gov/geoserver/wms",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "status": "dead",
+          "notes": "broadbandmap.gov offline — redirects to nowhere"
         },
         {
           "type": "wms-getCapabilities",
           "url": "http://opengeocluster.appgeo.com/geoserver/wms",
           "dataCustodian": "[Western Governers Association CHAT](http://energy.gov)",
           "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "WGA Critical Habitat Assessment Tool [CHAT]"
+          "name": "WGA Critical Habitat Assessment Tool [CHAT]",
+          "status": "dead",
+          "notes": "DNS resolution failure for opengeocluster.appgeo.com"
         },
         {
-          "type" : "wms-getCapabilities",
-          "name" : "DOE [National Renewable Energy Laboratory] Geoserver",
-          "url" : "https://mapservices.nrel.gov/wms",
+          "type": "wms-getCapabilities",
+          "name": "DOE [National Renewable Energy Laboratory] Geoserver",
+          "url": "https://mapservices.nrel.gov/wms",
           "dataCustodian": "[US Dept of Energy](http://energy.gov)",
-          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)"
+          "description": "[Licence](http://creativecommons.org/licenses/by/3.0/)",
+          "status": "dead",
+          "notes": "Host unreachable — mapservices.nrel.gov does not resolve"
         },
         {
           "type": "wms-getCapabilities",
           "url": "http://geonode.state.gov/geoserver/wms",
           "dataCustodian": "[U.S. State Department - Humanitarian Information Unit](http://geonode.state.gov)",
           "description": "[Public Domain CC0 - unless otherwise noted](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "State Department - Humanitarian Information Unit"
+          "name": "State Department - Humanitarian Information Unit",
+          "status": "dead",
+          "notes": "geonode.state.gov unreachable"
         },
         {
           "type": "wms-getCapabilities",
           "url": "http://geonode.wfp.org/geoserver/wms",
           "dataCustodian": "[World Food Program](http://geonode.wfp.org)",
           "description": "[License](http://creativecommons.org/licenses/by/3.0/)",
-          "name": "World Food Program"
+          "name": "World Food Program",
+          "status": "dead",
+          "notes": "geonode.wfp.org unreachable"
         },
         {
-          "name" : "DOE [Argonne National Lab - Solar]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://solarmapper.anl.gov/ArcGIS/rest/services/"
+          "name": "DOE [Argonne National Lab - Solar]",
+          "type": "esri-mapServer-group",
+          "url": "http://solarmapper.anl.gov/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Cloudflare challenge page — ArcGIS service not accessible"
         },
         {
-          "name" : "DOE [Bonneville Power Administration]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis.bpa.gov/ArcGIS/rest/services/"
+          "name": "DOE [Bonneville Power Administration]",
+          "type": "esri-mapServer-group",
+          "url": "http://gis.bpa.gov/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — gis.bpa.gov does not respond"
         },
         {
-          "name" : "DOE [Legacy Management]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gems.lm.doe.gov/arcgis/rest/services/"
+          "name": "DOE [Legacy Management]",
+          "type": "esri-mapServer-group",
+          "url": "https://gems.lm.doe.gov/arcgis/rest/services/",
+          "status": "live",
+          "notes": "ArcGIS v11.5 alive at HTTPS — 5 folders (GEMS, GEMS_AerialImagery, GEMS_EXT, GEMS_EXT_SiteBase, GEMS_SiteBase), 2 services (Reports GPServer, Site_Features MapServer)"
         },
         {
-          "name" : "DOE [National Renewable Energy Laboratory]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gisatnrel.nrel.gov/ArcGIS/rest/services/"
+          "name": "DOE [National Renewable Energy Laboratory]",
+          "type": "esri-mapServer-group",
+          "url": "http://gisatnrel.nrel.gov/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — gisatnrel.nrel.gov does not respond"
         },
         {
-          "name" : "DOI-BLM [GeoCommunicator]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://www.geocommunicator.gov/ArcGIS/rest/services/"
+          "name": "DOI-BLM [GeoCommunicator]",
+          "type": "esri-mapServer-group",
+          "url": "http://www.geocommunicator.gov/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — geocommunicator.gov offline"
         },
         {
-          "name" : "DOI [Indian Health Services]",
-          "type" : "esri-mapServer-group",
-          "url" : "https://gis.ihs.gov:6443/arcgis/rest/services/"
+          "name": "DOI [Indian Health Services]",
+          "type": "esri-mapServer-group",
+          "url": "https://gis.ihs.gov:6443/arcgis/rest/services/",
+          "status": "dead",
+          "notes": "Connection timeout on HTTPS port 6443"
         },
         {
-          "name" : "EPA [MyEnvironment]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://epamap14.epa.gov/arcgis/rest/services/"
+          "name": "EPA [MyEnvironment]",
+          "type": "esri-mapServer-group",
+          "url": "http://epamap14.epa.gov/arcgis/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — epamap14.epa.gov"
         },
         {
-          "name" : "EPA [National Hydrologic Dataset (NHD) Plus]",
-          "type" : "esri-mapServer-group",
-          "url" : "hhttp://54.163.241.137/arcgis/rest/services/"
+          "name": "EPA [National Hydrologic Dataset (NHD) Plus]",
+          "type": "esri-mapServer-group",
+          "url": "http://54.163.241.137/arcgis/rest/services/",
+          "status": "dead",
+          "notes": "IP-based endpoint unreachable; fixed typo from original 'hhttp://'"
         },
         {
-          "name" : "ESRI [General Layers 3]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://maps3.arcgisonline.com/ArcGIS/rest/services/"
+          "name": "ESRI [General Layers 3]",
+          "type": "esri-mapServer-group",
+          "url": "http://maps3.arcgisonline.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "HTTP 503 — deprecated domain"
         },
         {
-          "name" : "ESRI [General Layers 1]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://maps1.arcgisonline.com/ArcGIS/rest/services/"
+          "name": "ESRI [General Layers 1]",
+          "type": "esri-mapServer-group",
+          "url": "http://maps1.arcgisonline.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "HTTP 503 — deprecated domain"
         },
         {
-          "name" : "ESRI [ESRI Labs 2]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://esrilabs2.esri.com/ArcGIS/rest/services/"
+          "name": "ESRI [ESRI Labs 2]",
+          "type": "esri-mapServer-group",
+          "url": "http://esrilabs2.esri.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — esrilabs2.esri.com"
         },
         {
-          "name" : "ESRI [Megacity]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://megacity.esri.com/ArcGIS/rest/services/"
+          "name": "ESRI [Megacity]",
+          "type": "esri-mapServer-group",
+          "url": "http://megacity.esri.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — megacity.esri.com"
         },
         {
-          "name" : "ESRI [Conservation2]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://conservation.arcgisonline.com/ArcGIS/rest/services/"
+          "name": "ESRI [Conservation2]",
+          "type": "esri-mapServer-group",
+          "url": "http://conservation.arcgisonline.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — conservation.arcgisonline.com"
         },
         {
-          "name" : "ESRI [DOI]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://maps4.arcgisonline.com/ArcGIS/rest/services/"
+          "name": "ESRI [DOI]",
+          "type": "esri-mapServer-group",
+          "url": "http://maps4.arcgisonline.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "HTTP 503 — deprecated domain"
         },
         {
-          "name" : "ESRI [General Assets and Census Data]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://arcgis02.h-gac.com/ArcGIS/rest/services/"
+          "name": "ESRI [General Assets and Census Data]",
+          "type": "esri-mapServer-group",
+          "url": "http://arcgis02.h-gac.com/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — arcgis02.h-gac.com"
         },
         {
-          "name" : "GSA [Building Inventory]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/"
+          "name": "GSA [Building Inventory]",
+          "type": "esri-mapServer-group",
+          "url": "https://services1.arcgis.com/eBupDfPlEJK3mdAm/arcgis/rest/services/",
+          "status": "live",
+          "notes": "ArcGIS v12 alive at HTTPS — 51 FeatureServer services (courthouse construction, antennas, broadband, FRPP, IOLP)"
         },
         {
-          "name" : "NASA",
-          "type" : "esri-mapServer-group",
-          "url" : "http://ags.servirlabs.net/ArcGIS/rest/services/"
+          "name": "NASA",
+          "type": "esri-mapServer-group",
+          "url": "http://ags.servirlabs.net/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — ags.servirlabs.net"
         },
         {
-          "name" : "The Nature Conservancy [LandScope]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://maps.tnc.org/ecadpubprodanon/rest/services/"
+          "name": "The Nature Conservancy [LandScope]",
+          "type": "esri-mapServer-group",
+          "url": "http://maps.tnc.org/ecadpubprodanon/rest/services/",
+          "status": "dead",
+          "notes": "HTTP 404 — maps.tnc.org no longer serves this path"
         },
         {
-          "name" : "USDA [Economic Research Service]",
-          "type" : "esri-mapServer-group",
-          "url" : "http://gis2.ers.usda.gov/ArcGIS/rest/services/"
+          "name": "USDA [Economic Research Service]",
+          "type": "esri-mapServer-group",
+          "url": "http://gis2.ers.usda.gov/ArcGIS/rest/services/",
+          "status": "dead",
+          "notes": "Host unreachable — gis2.ers.usda.gov"
         }
       ],
       "type": "group",
