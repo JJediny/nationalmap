@@ -11,9 +11,11 @@
     "displayOneBrand": 1,
     "catalogIndexUrl": null,
     "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2NzYxZjdkNi1mZmUyLTQ3YjMtOTdiMC00N2Y0ZTg0NWM3Y2EiLCJpZCI6Mjk5MiwiaWF0IjoxNjIyNTA0ODY0fQ.yOdPU8vWbX_dVDbofVpjMMCP59ZA1MKZInIuHV59bRo",
+    "corsProxyBaseUrl": null,
+    "serverConfigUrl": null,
     "developerAttribution": {
-      "link": "https://terria.io",
-      "text": "Terria Team at CSIRO's Data61"
+      "link": "https://data.gov",
+      "text": "GSA Data.gov"
     },
     "disclaimer": {
       "text": "Disclaimer:  This is a test and is under continuous development - it should not be used for navigation or precise land planning or spatial analysis",
@@ -118,8 +120,8 @@
       "build/TerriaJS/data/regionMapping.json",
       "https://terria-catalogs-public.storage.googleapis.com/nationalmap/region-mapping/isf-prod.json"
     ],
-    "showWelcomeMessage": true,
-    "supportEmail": "info@terria.io",
+    "showWelcomeMessage": false,
+    "supportEmail": "John.Jediny@gsa.gov",
     "theme": {
       "charcoalGrey": "#3f4854",
       "colorPrimary": "#519ac2",
