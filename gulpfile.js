@@ -1,153 +1,33 @@
-"use strict";
+/*eslint-env node*/
+/*eslint no-sync: 0*/
+/*eslint no-process-exit: 0*/
+
+'use strict';
 
 /*global require*/
-
-var fs = require('fs');
-var spawnSync = require('spawn-sync');
-var glob = require('glob-all');
+// Every module required-in here must be a `dependency` in package.json, not just a `devDependency`,
+// This matters if ever we have gulp tasks run from npm, especially post-install ones.
+var fse = require('fs-extra');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var browserify = require('browserify');
-var jshint = require('gulp-jshint');
-var jsdoc = require('gulp-jsdoc');
-var less = require('gulp-less');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var exorcist = require('exorcist');
-var buffer = require('vinyl-buffer');
-var transform = require('vinyl-transform');
-var source = require('vinyl-source-stream');
-var watchify = require('watchify');
-var NpmImportPlugin = require('less-plugin-npm-import');
-var jsoncombine = require('gulp-jsoncombine');
+var path = require('path');
+var PluginError = require('plugin-error');
 
-var appJSName = 'nationalmap.js';
-var appCssName = 'nationalmap.css';
-var specJSName = 'nationalmap-tests.js';
-var appEntryJSName = './index.js';
-var testGlob = './test/**/*.js';
+var watchOptions = {
+    interval: 1000
+};
 
-// Create the build directory, because browserify flips out if the directory that might
-// contain an existing source map doesn't exist.
-if (!fs.existsSync('wwwroot/build')) {
-    fs.mkdirSync('wwwroot/build');
-}
+gulp.task('check-terriajs-dependencies', function(done) {
+    var appPackageJson = require('./package.json');
+    var terriaPackageJson = require('terriajs/package.json');
 
-gulp.task('build-app', ['prepare-terriajs'], function() {
-    return build(appJSName, appEntryJSName, false);
+    syncDependencies(appPackageJson.dependencies, terriaPackageJson, true);
+    syncDependencies(appPackageJson.devDependencies, terriaPackageJson, true);
+    done();
 });
 
-gulp.task('build-specs', ['prepare-terriajs'], function() {
-    return build(specJSName, glob.sync(testGlob), false);
-});
+gulp.task('write-version', function(done) {
+    var spawnSync = require('child_process').spawnSync;
 
-gulp.task('build-css', function() {
-    return gulp.src('./index.less')
-        .pipe(less({
-            plugins: [
-                new NpmImportPlugin()
-            ]
-        }))
-        .pipe(rename(appCssName))
-        .pipe(gulp.dest('./wwwroot/build/'));
-});
-
-gulp.task('build', ['build-css', 'merge-datasources', 'build-app', 'build-specs']);
-
-gulp.task('release-app', ['prepare'], function() {
-    return build(appJSName, appEntryJSName, true);
-});
-
-gulp.task('release-specs', ['prepare'], function() {
-    return build(specJSName, glob.sync(testGlob), true);
-});
-
-gulp.task('release', ['build-css', 'merge-datasources', 'release-app', 'release-specs']);
-
-gulp.task('watch-app', ['prepare'], function() {
-    return watch(appJSName, appEntryJSName, false);
-});
-
-gulp.task('watch-specs', ['prepare'], function() {
-    return watch(specJSName, glob.sync(testGlob), false);
-});
-
-gulp.task('watch-css', ['build-css'], function() {
-    return gulp.watch(['./index.less', './node_modules/terriajs/lib/Styles/*.less'], ['build-css']);
-});
-
-gulp.task('watch-datasource-groups', ['merge-groups'], function() {
-    return gulp.watch('datasources/00_National_Data_Sets/*.json', [ 'merge-groups', 'merge-catalog' ]);
-});
-
-gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
-    return gulp.watch('datasources/*.json', [ 'merge-catalog' ]);
-});
-
-gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
-
-
-gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources']);
-
-gulp.task('lint', function(){
-    return gulp.src(['lib/**/*.js', 'test/**/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(jshint.reporter('fail'));
-});
-
-gulp.task('docs', function(){
-    return gulp.src('lib/**/*.js')
-        .pipe(jsdoc('./wwwroot/doc', undefined, {
-            plugins : ['plugins/markdown']
-        }));
-});
-
-gulp.task('prepare', ['prepare-terriajs']);
-
-gulp.task('prepare-terriajs', function() {
-    return gulp.src([
-            'node_modules/terriajs/wwwroot/**'
-        ], { base: 'node_modules/terriajs/wwwroot' })
-    .pipe(gulp.dest('wwwroot/build/TerriaJS'));
-});
-
-gulp.task('merge-groups', function() {
-    var jsonspacing=0;
-    return gulp.src("./datasources/00_National_Data_Sets/*.json")
-    .pipe(jsoncombine("00_National_Data_Sets.json", function(data) {
-        // be absolutely sure we have the files in alphabetical order
-        var keys = Object.keys(data).slice().sort();
-        for (var i = 1; i < keys.length; i++) {
-            data[keys[0]].catalog[0].items.push(data[keys[i]].catalog[0].items[0]);
-        }
-        return new Buffer(JSON.stringify(data[keys[0]], null, jsonspacing));
-    }))
-    .pipe(gulp.dest("./datasources"));
-});
-
-gulp.task('merge-catalog', ['merge-groups'], function() {
-    var jsonspacing=0;
-    return gulp.src("./datasources/*.json")
-        .pipe(jsoncombine("nm.json", function(data) {
-        // be absolutely sure we have the files in alphabetical order, with 000_settings first.
-        var keys = Object.keys(data).slice().sort();
-        data[keys[0]].catalog = [];
-
-        for (var i = 1; i < keys.length; i++) {
-            data[keys[0]].catalog.push(data[keys[i]].catalog[0]);
-        }
-        return new Buffer(JSON.stringify(data[keys[0]], null, jsonspacing));
-    }))
-    .pipe(gulp.dest("./wwwroot/init"));
-});
-
-gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
-
-gulp.task('default', ['lint', 'build']);
-
-function bundle(name, bundler, minify, catchErrors) {
     // Get a version string from "git describe".
     var version = spawnSync('git', ['describe']).stdout.toString().trim();
     var isClean = spawnSync('git', ['status', '--porcelain']).stdout.toString().length === 0;
@@ -155,76 +35,316 @@ function bundle(name, bundler, minify, catchErrors) {
         version += ' (plus local modifications)';
     }
 
-    fs.writeFileSync('version.js', 'module.exports = \'' + version + '\';');
+    fse.writeFileSync('version.js', 'module.exports = \'' + version + '\';');
 
-    // Combine main.js and its dependencies into a single file.
-    // The poorly-named "debug: true" causes Browserify to generate a source map.
-    var result = bundler.bundle();
+    done();
+});
 
-    if (catchErrors) {
-        // Display errors to the user, and don't let them propagate.
-        result = result.on('error', function(e) {
-            gutil.log('Browserify Error', e.message);
-        });
+gulp.task('build-app', gulp.series('check-terriajs-dependencies', 'write-version', function buildApp(done) {
+    var runWebpack = require('terriajs/buildprocess/runWebpack.js');
+    var webpack = require('webpack');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(true);
+
+    checkForDuplicateCesium();
+
+    runWebpack(webpack, webpackConfig, done);
+}));
+
+gulp.task('release-app', gulp.series('check-terriajs-dependencies', 'write-version', function releaseApp(done) {
+    var runWebpack = require('terriajs/buildprocess/runWebpack.js');
+    var webpack = require('webpack');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(false);
+
+    checkForDuplicateCesium();
+
+    runWebpack(webpack, Object.assign({}, webpackConfig, {
+        plugins: webpackConfig.plugins || []
+    }), done);
+}));
+
+gulp.task('watch-app', gulp.series('check-terriajs-dependencies', function watchApp(done) {
+    var watchWebpack = require('terriajs/buildprocess/watchWebpack');
+    var webpack = require('webpack');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(true, false);
+
+    checkForDuplicateCesium();
+
+    fse.writeFileSync('version.js', 'module.exports = \'Development Build\';');
+    watchWebpack(webpack, webpackConfig, done);
+}));
+
+gulp.task('copy-terriajs-assets', function() {
+    var terriaWebRoot = path.join(getPackageRoot('terriajs'), 'wwwroot');
+    var sourceGlob = path.join(terriaWebRoot, '**');
+    var destPath = path.resolve(__dirname, 'wwwroot', 'build', 'TerriaJS');
+
+    return gulp
+        .src([ sourceGlob ], { base: terriaWebRoot })
+        .pipe(gulp.dest(destPath));
+});
+
+gulp.task('watch-terriajs-assets', gulp.series('copy-terriajs-assets', function waitForTerriaJsAssetChanges() {
+    var terriaWebRoot = path.join(getPackageRoot('terriajs'), 'wwwroot');
+    var sourceGlob = path.join(terriaWebRoot, '**');
+
+    // gulp.watch as of gulp v4.0.0 doesn't work with backslashes (the task is never triggered).
+    // But Windows is ok with forward slashes, so use those instead.
+    if (path.sep === '\\') {
+        sourceGlob = sourceGlob.replace(/\\/g, '/');
     }
 
-    result = result
-        .pipe(source(name))
-        .pipe(buffer());
+    return gulp.watch(sourceGlob, watchOptions, gulp.series('copy-terriajs-assets'));
+}));
 
-    if (minify) {
-        // Minify the combined source.
-        // sourcemaps.init/write maintains a working source map after minification.
-        // "preserveComments: 'some'" preserves JSDoc-style comments tagged with @license or @preserve.
-        result = result
-            .pipe(sourcemaps.init({ loadMaps: true }))
-            .pipe(uglify({preserveComments: 'some', mangle: true, compress: true}))
-            .pipe(sourcemaps.write());
+gulp.task('copy-editor', function() {
+    var glob = path.join(getPackageRoot('terriajs-catalog-editor'), '**');
+
+    return gulp.src(glob)
+        .pipe(gulp.dest('./wwwroot/editor'));
+});
+
+// Generate new schema for editor, and copy it over whatever version came with editor.
+gulp.task('make-editor-schema', gulp.series('copy-editor', function makeEditorSchema() {
+    var generateSchema = require('generate-terriajs-schema');
+    var schemaSourceGlob = require('terriajs/buildprocess/schemaSourceGlob');
+
+    return generateSchema({
+        sourceGlob: schemaSourceGlob,
+        dest: 'wwwroot/editor',
+        noversionsubdir: true,
+        editor: true,
+        quiet: true
+    });
+}));
+
+gulp.task('lint', function(done) {
+    var runExternalModule = require('terriajs/buildprocess/runExternalModule');
+
+    runExternalModule('eslint/bin/eslint.js', [
+        '-c', path.join(getPackageRoot('terriajs'), '.eslintrc'),
+        '--ignore-pattern', 'lib/ThirdParty',
+        '--max-warnings', '0',
+        'index.js',
+        'lib'
+    ]);
+    done();
+});
+
+function getPackageRoot(packageName) {
+    return path.dirname(require.resolve(packageName + '/package.json'));
+}
+
+gulp.task('make-package', function(done) {
+    var argv = require('yargs').argv;
+    var spawnSync = require('child_process').spawnSync;
+    var json5 = require('json5');
+
+    var packageName = argv.packageName || (process.env.npm_package_name + '-' + spawnSync('git', ['describe']).stdout.toString().trim());
+    var packagesDir = path.join('.', 'deploy', 'packages');
+
+    if (!fse.existsSync(packagesDir)) {
+        fse.mkdirSync(packagesDir);
     }
 
-    result = result
-        // Extract the embedded source map to a separate file.
-        .pipe(transform(function () { return exorcist('wwwroot/build/' + name + '.map'); }))
+    var workingDir = path.join('.', 'deploy', 'work');
+    if (fse.existsSync(workingDir)) {
+        fse.removeSync(workingDir);
+    }
 
-        // Write the finished product.
-        .pipe(gulp.dest('wwwroot/build'));
+    fse.mkdirSync(workingDir);
+
+    fse.copySync('wwwroot', path.join(workingDir, 'wwwroot'));
+
+    // For an unknown reason, the error "EACCES: permission denied" will occur when copying
+    // some files from this cache directory to work directory when running this task on WSL.
+    // It seems that removing this cache directory will not cause errors because that cache
+    // is only used in build stage.
+    var dirHavingIssue = path.join('.', 'node_modules', '.cache', 'terser-webpack-plugin');
+    if (fse.existsSync(dirHavingIssue)){
+        fse.removeSync(dirHavingIssue);
+    }
+    
+    fse.copySync('node_modules', path.join(workingDir, 'node_modules'));
+    if (fse.existsSync('proxyauth.json')) {
+        fse.copySync('proxyauth.json', path.join(workingDir, 'proxyauth.json'));
+    }
+    fse.copySync('deploy/varnish', path.join(workingDir, 'varnish'));
+    fse.copySync('ecosystem.config.js', path.join(workingDir, 'ecosystem.config.js'));
+    fse.copySync('ecosystem-production.config.js', path.join(workingDir, 'ecosystem-production.config.js'));
+
+    if (argv.serverConfigOverride) {
+        var serverConfig = json5.parse(fse.readFileSync('devserverconfig.json', 'utf8'));
+        var serverConfigOverride = json5.parse(fse.readFileSync(argv.serverConfigOverride, 'utf8'));
+        var productionServerConfig = mergeConfigs(serverConfig, serverConfigOverride);
+        fse.writeFileSync(path.join(workingDir, 'productionserverconfig.json'), JSON.stringify(productionServerConfig, undefined, '  '));
+    } else {
+        fse.writeFileSync(path.join(workingDir, 'productionserverconfig.json'), fse.readFileSync('devserverconfig.json', 'utf8'));
+    }
+
+    if (argv.clientConfigOverride) {
+        var clientConfig = json5.parse(fse.readFileSync(path.join('wwwroot', 'config.json'), 'utf8'));
+        var clientConfigOverride = json5.parse(fse.readFileSync(argv.clientConfigOverride, 'utf8'));
+        var productionClientConfig = mergeConfigs(clientConfig, clientConfigOverride);
+        fse.writeFileSync(path.join(workingDir, 'wwwroot', 'config.json'), JSON.stringify(productionClientConfig, undefined, '  '));
+    }
+
+    // if we are on OSX make sure to use gtar for compatibility with Linux
+    // otherwise we see lots of error message when extracting with GNU tar
+    var tar = /^darwin/.test(process.platform) ? 'gtar' : 'tar';
+
+    var tarResult = spawnSync(tar, [
+        'czf',
+        path.join('..', 'packages', packageName + '.tar.gz')
+    ].concat(fse.readdirSync(workingDir)), {
+        cwd: workingDir,
+        stdio: 'inherit',
+        shell: false
+    });
+    if (tarResult.status !== 0) {
+        throw new PluginError('tar', 'External module exited with an error.', { showStack: false });
+    }
+
+    done();
+});
+
+gulp.task('clean', function(done) {
+    // // Remove build products
+    fse.removeSync(path.join('wwwroot', 'build'));
+
+    done();
+});
+
+function mergeConfigs(original, override) {
+    var result = Object.assign({}, original);
+
+    if (typeof original === 'undefined') {
+        original = {};
+    }
+
+    for (var name in override) {
+        if (!override.hasOwnProperty(name)) {
+            continue;
+        }
+
+        if (Array.isArray(override[name])) {
+            result[name] = override[name];
+        } else if (typeof override[name] === 'object') {
+            result[name] = mergeConfigs(original[name], override[name]);
+        } else {
+            result[name] = override[name];
+        }
+    }
 
     return result;
 }
 
-function build(name, files, minify) {
-    return bundle(name, browserify({
-        entries: files,
-        debug: true
-    }), minify, false);
-}
+/*
+    Use EJS to render "datasources/foo.ejs" to "wwwroot/init/foo.json". Include files should be
+    stored in "datasources/includes/blah.ejs". You can refer to an include file as:
 
-function watch(name, files, minify) {
-    var bundler = watchify(browserify({
-        entries: files,
-        debug: true,
-        cache: {},
-        packageCache: {}
-    }));
+    <%- include includes/foo %>
 
-    function rebundle(ids) {
-        // Don't rebundle if only the version changed.
-        if (ids && ids.length === 1 && /\/version\.js$/.test(ids[0])) {
-            return;
-        }
+    If you want to pass parameters to the included file, do this instead:
 
-        var start = new Date();
+    <%- include('includes/foo', { name: 'Cool layer' } %>
 
-        var result = bundle(name, bundler, minify, true);
+    and in includes/foo:
 
-        result.on('end', function() {
-            console.log('Rebuilt ' + name + ' in ' + (new Date() - start) + ' milliseconds.');
-        });
+    "name": "<%= name %>"
+ */
+gulp.task('render-datasource-templates', function(done) {
+    var ejs = require('ejs');
+    var JSON5 = require('json5');
+    var templateDir = 'datasources';
 
-        return result;
+    // until https://github.com/TerriaJS/terriajs/pull/4227 is ready,
+    // merge in translation overrides via this task
+    // var json5 = require('json5');
+    // var translationFromLibPath = path.join(getPackageRoot('terriajs'), 'lib', 'Language', 'en', 'translation.json');
+    // var translationFromLib = json5.parse(fs.readFileSync(translationFromLibPath, 'utf8')) || {};
+    // var translationFromMap = json5.parse(fs.readFileSync(path.resolve(__dirname, 'lib', 'Language', 'en', 'translation.json'), 'utf8')) || {};
+    // var translation = {...translationFromLib, ...translationFromMap};
+    // fs.writeFileSync(translationFromLibPath, JSON.stringify(translation, null, 2));
+
+    try {
+        fse.accessSync(templateDir);
+    } catch (e) {
+        // Datasources directory doesn't exist? No problem.
+        done();
+        return;
     }
+    fse.readdirSync(templateDir).forEach(function(filename) {
+        if (filename.match(/\.ejs$/)) {
+            var templateFilename = path.join(templateDir, filename);
+            var template = fse.readFileSync(templateFilename,'utf8');
+            var result = ejs.render(template, null, {filename: templateFilename});
 
-    bundler.on('update', rebundle);
+            // Remove all new lines. This means you can add newlines to help keep source files manageable, without breaking your JSON.
+            // If you want actual new lines displayed somewhere, you should probably use <br/> if it's HTML, or \n\n if it's Markdown.
+            //result = result.replace(/(?:\r\n|\r|\n)/g, '');
 
-    return rebundle();
+            var outFilename = filename.replace('.ejs', '.json');
+            try {
+                // Replace "2" here with "0" to minify.
+                result = JSON.stringify(JSON5.parse(result), null, 2);
+                console.log('Rendered template ' + outFilename);
+            } catch (e) {
+                console.warn('Warning: Rendered template ' + outFilename + ' is not valid JSON');
+            }
+            fse.writeFileSync(path.join('wwwroot/init', outFilename), new Buffer(result));
+        }
+    });
+
+    done();
+});
+
+gulp.task('watch-datasource-templates', gulp.series('render-datasource-templates', function watchDatasourceTemplates() {
+    return gulp.watch(['lib/Language/**/*.json', 'datasources/**/*.ejs','datasources/*.json'], watchOptions, gulp.series('render-datasource-templates'));
+}));
+
+gulp.task('sync-terriajs-dependencies', function(done) {
+    var appPackageJson = require('./package.json');
+    var terriaPackageJson = require('terriajs/package.json');
+
+    syncDependencies(appPackageJson.dependencies, terriaPackageJson);
+    syncDependencies(appPackageJson.devDependencies, terriaPackageJson);
+
+    fse.writeFileSync('./package.json', JSON.stringify(appPackageJson, undefined, '  '));
+    console.log('TerriaMap\'s package.json has been updated. Now run yarn install.');
+    done();
+});
+
+function syncDependencies(dependencies, targetJson, justWarn) {
+    for (var dependency in dependencies) {
+        if (dependencies.hasOwnProperty(dependency)) {
+            var version = targetJson.dependencies[dependency] || targetJson.devDependencies[dependency];
+            if (version && version !== dependencies[dependency]) {
+                if (justWarn) {
+                    console.warn('Warning: There is a version mismatch for ' + dependency + '. This build may fail or hang. You should run `gulp sync-terriajs-dependencies`, then re-run `npm install`, then run gulp again.');
+                } else {
+                    console.log('Updating ' + dependency + ' from ' + dependencies[dependency] + ' to ' + version + '.');
+                    dependencies[dependency] = version;
+                }
+            }
+        }
+    }
 }
+
+function checkForDuplicateCesium() {
+    if (fse.existsSync('node_modules/terriajs-cesium') && fse.existsSync('node_modules/terriajs/node_modules/terriajs-cesium')) {
+        console.log('You have two copies of terriajs-cesium, one in this application\'s node_modules\n' +
+                    'directory and the other in node_modules/terriajs/node_modules/terriajs-cesium.\n' +
+                    'This leads to strange problems, such as knockout observables not working.\n' +
+                    'Please verify that node_modules/terriajs-cesium is the correct version and\n' +
+                    '  rm -rf node_modules/terriajs/node_modules/terriajs-cesium\n' +
+                    'Also consider running:\n' +
+                    '  yarn gulp sync-terriajs-dependencies\n' +
+                    'to prevent this problem from recurring the next time you `npm install`.');
+        throw new PluginError('checkForDuplicateCesium', 'You have two copies of Cesium.', { showStack: false });
+    }
+}
+
+gulp.task('build', gulp.series('render-datasource-templates', 'copy-terriajs-assets', 'build-app'));
+gulp.task('release', gulp.series('render-datasource-templates', 'copy-terriajs-assets', 'release-app', 'make-editor-schema'));
+gulp.task('watch', gulp.parallel('watch-datasource-templates', 'watch-terriajs-assets', 'watch-app'));
+gulp.task('default', gulp.series('lint', 'build'));
