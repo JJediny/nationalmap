@@ -4,7 +4,7 @@
   ],
   "parameters": {
     "appName": "NationalMap",
-    "bingMapsKey": "AknnzM4UsH9bgE37WZx4Gq5AU6tLT7nxLq0TxlDrlvWdYoh5SaevyYWGInNl1gDt",
+    "bingMapsKey": null,
     "brandBarElements": [
       "<a target=\"_blank\" href=\"https://github.com/DistributedOpenUnifiedGovernmentNetwork\"><img src=\"images/DougN.png\" height=\"60\" alt=\"United States Government\" /></a>"
     ],
