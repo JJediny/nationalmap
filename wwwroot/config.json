@@ -1,6 +1,6 @@
 {
   "initializationUrls": [
-    "init/nm.json"
+    "init/nm-v2.json"
   ],
   "parameters": {
     "appName": "NationalMap",
