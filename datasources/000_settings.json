@@ -145,6 +145,23 @@
     "maps3.arcgisonline.com",
     "maps4.arcgisonline.com",
     "corsproxy.com",
-    "githubusercontent.com"
+    "githubusercontent.com",
+    "basemaps.cartocdn.com",
+    "cartodb-basemaps-a.global.ssl.fastly.net",
+    "cartodb-basemaps-b.global.ssl.fastly.net",
+    "cartodb-basemaps-c.global.ssl.fastly.net",
+    "cartodb-basemaps-d.global.ssl.fastly.net",
+    "tile.openstreetmap.org",
+    "a.tile.openstreetmap.org",
+    "b.tile.openstreetmap.org",
+    "c.tile.openstreetmap.org",
+    "storage.googleapis.com",
+    "ion.cesium.com",
+    "assets.cesium.com",
+    "dev.virtualearth.net",
+    "ecn.t0.tiles.virtualearth.net",
+    "ecn.t1.tiles.virtualearth.net",
+    "ecn.t2.tiles.virtualearth.net",
+    "ecn.t3.tiles.virtualearth.net"
   ]
 }
