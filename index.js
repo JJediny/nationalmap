@@ -34,6 +34,23 @@ if (process.env.NODE_ENV === "development") {
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria(terriaOptions);
 
+// Patch CORS proxy to support query-based public proxies like corsproxy.io without flag corruption
+const originalGetURL = terria.corsProxy.getURL;
+terria.corsProxy.getURL = function(resource, proxyFlag) {
+    if (this.baseProxyUrl && (this.baseProxyUrl.indexOf('?') !== -1 || this.baseProxyUrl.indexOf('corsproxy.io') !== -1)) {
+        return this.baseProxyUrl + resource;
+    }
+    return originalGetURL.call(this, resource, proxyFlag);
+};
+
+const originalGetProxyBaseURL = terria.corsProxy.getProxyBaseURL;
+terria.corsProxy.getProxyBaseURL = function(proxyFlag) {
+    if (this.baseProxyUrl && (this.baseProxyUrl.indexOf('?') !== -1 || this.baseProxyUrl.indexOf('corsproxy.io') !== -1)) {
+        return this.baseProxyUrl;
+    }
+    return originalGetProxyBaseURL.call(this, proxyFlag);
+};
+
 // Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
 // insert your custom version of the code in the registerCustomComponentTypes function here instead.
 registerCustomComponentTypes(terria);
