@@ -11,7 +11,7 @@
     "displayOneBrand": 1,
     "catalogIndexUrl": null,
     "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2NzYxZjdkNi1mZmUyLTQ3YjMtOTdiMC00N2Y0ZTg0NWM3Y2EiLCJpZCI6Mjk5MiwiaWF0IjoxNjIyNTA0ODY0fQ.yOdPU8vWbX_dVDbofVpjMMCP59ZA1MKZInIuHV59bRo",
-    "corsProxyBaseUrl": null,
+    "corsProxyBaseUrl": "https://corsproxy.io/?",
     "serverConfigUrl": "serverconfig.json",
     "developerAttribution": {
       "link": "https://data.gov",
