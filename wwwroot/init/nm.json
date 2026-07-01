@@ -176,185 +176,85 @@
       ]
     },
     {
+      "type": "group",
+      "name": "Federal ArcGIS Servers",
       "members": [
         {
           "name": "Census [TIGER]",
           "type": "esri-group",
-          "url": "http://tigerweb.geo.census.gov/ArcGIS/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
+          "url": "http://tigerweb.geo.census.gov/ArcGIS/rest/services/"
         },
         {
-          "name": "USDA [Economic Research Agency]",
+          "name": "DOI-BLM",
           "type": "esri-group",
-          "url": "https://gisportal.ers.usda.gov/server/rest/services/",
-          "status": "replaced",
-          "notes": "ERS migrated to ArcGIS Enterprise (v12). gisportal.ers.usda.gov"
-        },
-        {
-          "name": "DOI-USGS [National Gap Analysis Program]",
-          "type": "esri-group",
-          "url": "https://services.arcgis.com/v01gqwM5QqNysAAi/ArcGIS/rest/services/",
-          "status": "replaced",
-          "notes": "PAD-US data moved to ArcGIS Online. Also PAD-US Data Explorer at maps.usgs.gov/padusdataexplorer/"
-        },
-        {
-          "name": "DHS-FEMA [Services]",
-          "type": "esri-group",
-          "url": "https://gis.fema.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "FEMA migrated to gis.fema.gov (v11.5). NFHL at hazards.fema.gov. Old endpoint HTTP 410"
-        },
-        {
-          "name": "DOC-NOAA [NGDC]",
-          "type": "esri-group",
-          "url": "http://gis.ncdc.noaa.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOC-NOAA [National Climate Data Center]",
-          "type": "esri-group",
-          "url": "http://gis.ncdc.noaa.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOC-NOAA [National Geophysical Data Center]",
-          "type": "esri-group",
-          "url": "http://gis.ngdc.noaa.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOC-NOAA [Maritime Boundaries]",
-          "type": "esri-group",
-          "url": "http://gis.ngdc.noaa.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOC-NOAA [National Weather and River Gauges]",
-          "type": "esri-group",
-          "url": "https://mapservices.weather.noaa.gov/eventdriven/rest/services/",
-          "status": "replaced",
-          "notes": "NWS migrated to mapservices.weather.noaa.gov (v11.3). River gauges under water/"
-        },
-        {
-          "name": "DOC-NOAA [Multipurpose Marine Cadstre]",
-          "type": "esri-group",
-          "url": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/",
-          "status": "replaced",
-          "notes": "Moved to coast.noaa.gov ArcGIS Server (v11.5). Also hub.marinecadastre.gov"
-        },
-        {
-          "name": "DOE [National Energy Technology Laboratory]",
-          "type": "esri-group",
-          "url": "https://arcgis.netl.doe.gov/server/rest/services/",
-          "status": "replaced",
-          "notes": "NETL migrated to arcgis.netl.doe.gov (v11.x)"
-        },
-        {
-          "name": "DOI-BLM [ePlanning]",
-          "type": "esri-group",
-          "url": "https://gis.blm.gov/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "DOI-BLM [Landscape]",
-          "type": "esri-group",
-          "url": "https://gis.blm.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "Consolidated into main BLM GIS at gis.blm.gov"
-        },
-        {
-          "name": "DOI-BOEM",
-          "type": "esri-group",
-          "url": "https://gis.boem.gov/arcgis/rest/services/",
-          "status": "replaced",
-          "notes": "Moved from boemre.gov to boem.gov (v11.3)"
-        },
-        {
-          "name": "DOI-BOEM [Ocean Energy]",
-          "type": "esri-group",
-          "url": "https://gis.boem.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "Merged into BOEM main GIS at gis.boem.gov"
+          "url": "https://gis.blm.gov/arcgis/rest/services/"
         },
         {
           "name": "DOI-NPS",
           "type": "esri-group",
-          "url": "https://mapservices.nps.gov/arcgis/rest/services/",
-          "status": "https-upgrade",
-          "notes": "HTTPS works (v11.5). Upgrade from HTTP"
+          "url": "https://mapservices.nps.gov/arcgis/rest/services/"
         },
         {
-          "name": "DOI-NPS [IMGIS]",
+          "name": "DOI-NPS [NPScape / IRMA]",
           "type": "esri-group",
-          "url": "https://mapservices.nps.gov/arcgis/rest/services/",
-          "status": "merged",
-          "notes": "Consolidated into mapservices.nps.gov"
+          "url": "https://irmaservices.nps.gov/arcgis/rest/services/"
         },
         {
-          "name": "DOI-NPS [NPScape]",
+          "name": "DOC-NOAA [NGDC / Climate]",
           "type": "esri-group",
-          "url": "https://irmaservices.nps.gov/arcgis/rest/services/",
-          "status": "https-upgrade",
-          "notes": "HTTPS works (v11.5). Upgrade from HTTP"
+          "url": "http://gis.ncdc.noaa.gov/arcgis/rest/services/"
         },
         {
-          "name": "DOI-USFWS [Critical Habitat]",
+          "name": "DOC-NOAA [National Geophysical Data Center]",
           "type": "esri-group",
-          "url": "https://services.arcgis.com/QVENGdaPbd4LUkLV/ArcGIS/rest/services/USFWS_Critical_Habitat/FeatureServer",
-          "status": "replaced",
-          "notes": "Moved to ArcGIS Online"
+          "url": "http://gis.ngdc.noaa.gov/arcgis/rest/services/"
         },
         {
-          "name": "DOI-USFWS [Wetlands]",
+          "name": "DOC-NOAA [Marine Cadastre]",
           "type": "esri-group",
-          "url": "https://fwsprimary.wim.usgs.gov/server/rest/services/",
-          "status": "replaced",
-          "notes": "Wetlands data moved to fwsprimary.wim.usgs.gov (v10.81). Wetlands, Riparian, HUC services"
-        },
-        {
-          "name": "DOI-USGS [National Geologic Map]",
-          "type": "esri-group",
-          "url": "https://services1.arcgis.com/ypdMhhEhrtBXLtQv/ArcGIS/rest/services/USGS_Geology/FeatureServer",
-          "status": "replaced",
-          "notes": "NGMDB migrating. Geologic map data on AGOL"
-        },
-        {
-          "name": "HUD",
-          "type": "esri-group",
-          "url": "http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/",
-          "status": "live",
-          "notes": "Verified live on original URL"
-        },
-        {
-          "name": "HUD [eGIS]",
-          "type": "esri-group",
-          "url": "https://egis.hud.gov/arcgis/rest/services/",
-          "status": "https-upgrade",
-          "notes": "HTTPS works (v10.71). Folders: affh, affht, cart, cpdmaps, gotit, hrl, opendata, pmt, tdat"
+          "url": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/"
         },
         {
           "name": "DOC-NOAA [Coastal Flooding]",
           "type": "esri-group",
-          "url": "https://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/",
-          "status": "replaced",
-          "notes": "Coastal flooding data moved to coast.noaa.gov (v11.5). CFEM Flood Hazard Composite"
+          "url": "https://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/"
         },
         {
-          "name": "USDA-USFS",
+          "name": "DOC-NOAA [National Weather]",
           "type": "esri-group",
-          "url": "https://apps.fs.usda.gov/arcx/rest/services/",
-          "status": "replaced",
-          "notes": "USFS migrated from .fed.us to .usda.gov. Also fsgisx01, fsgisx02 servers"
+          "url": "https://mapservices.weather.noaa.gov/eventdriven/rest/services/"
+        },
+        {
+          "name": "DHS-FEMA",
+          "type": "esri-group",
+          "url": "https://gis.fema.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USFWS [Wetlands]",
+          "type": "esri-group",
+          "url": "https://fwsprimary.wim.usgs.gov/server/rest/services/"
+        },
+        {
+          "name": "HUD [eGIS]",
+          "type": "esri-group",
+          "url": "https://egis.hud.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "USDA [Forest Service]",
+          "type": "esri-group",
+          "url": "https://apps.fs.usda.gov/arcx/rest/services/"
+        },
+        {
+          "name": "DOE [NETL]",
+          "type": "esri-group",
+          "url": "https://arcgis.netl.doe.gov/server/rest/services/"
+        },
+        {
+          "name": "HUD",
+          "type": "esri-group",
+          "url": "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/"
         }
-      ],
-      "type": "group",
-      "name": "Federal ArcGIS Servers"
+      ]
     }
   ]
 }
