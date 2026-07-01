@@ -1,4 +1,4 @@
 {
-  "proxyAllDomains": false,
+  "proxyAllDomains": true,
   "allowedProxyDomains": []
 }
