@@ -1,0 +1,404 @@
+{
+  "services": [],
+  "homeCamera": {
+    "north": 56,
+    "east": -48,
+    "south": 16,
+    "west": 130
+  },
+  "baseMaps": {
+    "items": [
+      {
+        "item": {
+          "id": "basemap-bing-aerial-with-labels",
+          "name": "Bing Maps Aerial with Labels",
+          "type": "ion-imagery",
+          "ionAssetId": 3,
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/bing-aerial-labels.png",
+        "contrastColor": "#ffffff"
+      },
+      {
+        "item": {
+          "id": "basemap-bing-aerial",
+          "name": "Bing Maps Aerial",
+          "type": "ion-imagery",
+          "ionAssetId": 2,
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/bing-aerial.png",
+        "contrastColor": "#ffffff"
+      },
+      {
+        "item": {
+          "id": "basemap-bing-roads",
+          "name": "Bing Maps Roads",
+          "type": "ion-imagery",
+          "ionAssetId": 4,
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/bing-maps-roads.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-natural-earth-II",
+          "name": "Natural Earth II",
+          "type": "url-template-imagery",
+          "url": "https://storage.googleapis.com/terria-datasets-public/basemaps/natural-earth-tiles/{z}/{x}/{reverseY}.png",
+          "attribution": "<a href='https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/'>Natural Earth II</a> - From Natural Earth. <a href='https://www.naturalearthdata.com/about/terms-of-use/'>Public Domain</a>.",
+          "maximumLevel": 7,
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/natural-earth.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-osm-standard",
+          "name": "OSM Standard (OpenStreetMap)",
+          "type": "open-street-map",
+          "url": "https://tile.openstreetmap.org/",
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/natural-earth.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-osm-bright",
+          "name": "OSM Bright (Voyager)",
+          "type": "open-street-map",
+          "url": "https://basemaps.cartocdn.com/rastertiles/voyager/",
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/'>CARTO</a>",
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/positron.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-positron",
+          "name": "Positron (Light)",
+          "type": "open-street-map",
+          "url": "https://basemaps.cartocdn.com/light_all/",
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/positron.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "id": "basemap-darkmatter",
+          "name": "Dark Matter",
+          "type": "open-street-map",
+          "url": "https://basemaps.cartocdn.com/dark_all/",
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>",
+          "opacity": 1
+        },
+        "image": "build/TerriaJS/images/dark-matter.png",
+        "contrastColor": "#ffffff"
+      }
+    ],
+    "defaultBaseMapId": "basemap-bing-aerial-with-labels"
+  },
+  "corsDomains": [
+    "arcgis.com",
+    "arcgisonline.com",
+    "services.arcgis.com",
+    "services1.arcgis.com",
+    "gis.ncdc.noaa.gov",
+    "gis.ngdc.noaa.gov",
+    "gis.fema.gov",
+    "hazards.fema.gov",
+    "services.nationalmap.gov",
+    "basemap.nationalmap.gov",
+    "elevation.nationalmap.gov",
+    "carto.nationalmap.gov",
+    "geodata.nationalmap.gov",
+    "hydro.nationalmap.gov",
+    "tran.nationalmap.gov",
+    "corsproxy.com",
+    "githubusercontent.com",
+    "basemaps.cartocdn.com",
+    "cartodb-basemaps-a.global.ssl.fastly.net",
+    "cartodb-basemaps-b.global.ssl.fastly.net",
+    "cartodb-basemaps-c.global.ssl.fastly.net",
+    "cartodb-basemaps-d.global.ssl.fastly.net",
+    "tile.openstreetmap.org",
+    "a.tile.openstreetmap.org",
+    "b.tile.openstreetmap.org",
+    "c.tile.openstreetmap.org",
+    "storage.googleapis.com",
+    "ion.cesium.com",
+    "assets.cesium.com",
+    "dev.virtualearth.net",
+    "ecn.t0.tiles.virtualearth.net",
+    "ecn.t1.tiles.virtualearth.net",
+    "ecn.t2.tiles.virtualearth.net",
+    "ecn.t3.tiles.virtualearth.net"
+  ],
+  "catalog": [
+    {
+      "type": "group",
+      "name": "Basemaps",
+      "members": [
+        {
+          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer",
+          "dataCustodian": "[USGS The National Map](https://basemap.nationalmap.gov/)",
+          "description": "USGS Topo is a topographic tile cache base map combining the most current data (Boundaries, Names, Transportation, Elevation, Hydrography, Land Cover) from The National Map.",
+          "type": "esri-mapServer",
+          "name": "USGS Topo"
+        },
+        {
+          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer",
+          "dataCustodian": "[USGS The National Map](https://basemap.nationalmap.gov/)",
+          "description": "USGS Imagery - satellite and aerial imagery from The National Map.",
+          "type": "esri-mapServer",
+          "name": "USGS Imagery"
+        },
+        {
+          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSHydroCached/MapServer",
+          "dataCustodian": "[USGS The National Map](https://basemap.nationalmap.gov/)",
+          "description": "USGS Hydro - streams, waterbodies and hydrographic features from The National Map.",
+          "type": "esri-mapServer",
+          "name": "USGS Hydro"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "Federal ArcGIS Servers",
+      "members": [
+        {
+          "name": "Census [TIGER]",
+          "type": "esri-group",
+          "url": "https://tigerweb.geo.census.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name": "USDA [Economic Research Agency]",
+          "type": "esri-group",
+          "url": "https://gisportal.ers.usda.gov/server/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [National Gap Analysis Program]",
+          "type": "esri-group",
+          "url": "https://services.arcgis.com/v01gqwM5QqNysAAi/ArcGIS/rest/services/"
+        },
+        {
+          "name": "DHS-FEMA [Services]",
+          "type": "esri-group",
+          "url": "https://gis.fema.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [NGDC]",
+          "type": "esri-group",
+          "url": "https://gis.ncdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [National Climate Data Center]",
+          "type": "esri-group",
+          "url": "https://gis.ncdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [National Geophysical Data Center]",
+          "type": "esri-group",
+          "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [Maritime Boundaries]",
+          "type": "esri-group",
+          "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [National Weather and River Gauges]",
+          "type": "esri-group",
+          "url": "https://mapservices.weather.noaa.gov/eventdriven/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [Multipurpose Marine Cadstre]",
+          "type": "esri-group",
+          "url": "https://coast.noaa.gov/arcgis/rest/services/MarineCadastre/"
+        },
+        {
+          "name": "DOD-USACE [Army Corps]",
+          "type": "esri-group",
+          "url": "https://geospatial-usace.opendata.arcgis.com/"
+        },
+        {
+          "name": "DOE [Energy Information Agency]",
+          "type": "esri-group",
+          "url": "https://atlas.eia.gov/"
+        },
+        {
+          "name": "DOE [National Energy Technology Laboratory]",
+          "type": "esri-group",
+          "url": "https://arcgis.netl.doe.gov/server/rest/services/"
+        },
+        {
+          "name": "DOI-BLM [ePlanning]",
+          "type": "esri-group",
+          "url": "https://gis.blm.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-BLM [Landscape]",
+          "type": "esri-group",
+          "url": "https://gis.blm.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-BOEM",
+          "type": "esri-group",
+          "url": "https://gis.boem.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-BOEM [Ocean Energy]",
+          "type": "esri-group",
+          "url": "https://gis.boem.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-NPS",
+          "type": "esri-group",
+          "url": "https://mapservices.nps.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-NPS [IMGIS]",
+          "type": "esri-group",
+          "url": "https://mapservices.nps.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-NPS [NPScape]",
+          "type": "esri-group",
+          "url": "https://irmaservices.nps.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USFWS [Critical Habitat]",
+          "type": "esri-group",
+          "url": "https://services.arcgis.com/QVENGdaPbd4LUkLV/ArcGIS/rest/services/USFWS_Critical_Habitat/FeatureServer"
+        },
+        {
+          "name": "DOI-USFWS [Wetlands]",
+          "type": "esri-group",
+          "url": "https://fwsprimary.wim.usgs.gov/server/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [National Geologic Map]",
+          "type": "esri-group",
+          "url": "https://services1.arcgis.com/ypdMhhEhrtBXLtQv/ArcGIS/rest/services/USGS_Geology/FeatureServer"
+        },
+        {
+          "name": "DOI-USGS [High Resolution Imagery]",
+          "type": "esri-group",
+          "url": "https://imagery.nationalmap.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [The National Map - Basemaps]",
+          "type": "esri-group",
+          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [The National Map - Raster]",
+          "type": "esri-group",
+          "url": "https://basemap.nationalmap.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [The National Map - Services]",
+          "type": "esri-group",
+          "url": "https://carto.nationalmap.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOI-USGS [Wildfire.gov]",
+          "type": "esri-group",
+          "url": "https://portal.wildfire.gov/egp/"
+        },
+        {
+          "name": "DOT [Research and Innovative Technology Administration]",
+          "type": "esri-group",
+          "url": "https://geo.dot.gov/server/rest/services/"
+        },
+        {
+          "name": "EPA [Geodata]",
+          "type": "esri-group",
+          "url": "https://edg.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "EPA [Environmental Data Gateway]",
+          "type": "esri-group",
+          "url": "https://edg.epa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name": "EPA [MyEnviroment]",
+          "type": "esri-group",
+          "url": "https://edg.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "EPA [Office of Water]",
+          "type": "esri-group",
+          "url": "https://watersgeo.epa.gov/ArcGIS/rest/services/"
+        },
+        {
+          "name": "EPA [EnviroAtlas]",
+          "type": "esri-group",
+          "url": "https://enviroatlas.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "EPA [Environmental Justice]",
+          "type": "esri-group",
+          "url": "https://edg.epa.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "ESRI [Federal Data Services]",
+          "type": "esri-group",
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name": "ESRI [Imagery]",
+          "type": "esri-group",
+          "url": "https://services.arcgisonline.com/ArcGIS/rest/services/"
+        },
+        {
+          "name": "HUD",
+          "type": "esri-group",
+          "url": "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/"
+        },
+        {
+          "name": "Nature Conservancy",
+          "type": "esri-group",
+          "url": "https://tnc.maps.arcgis.com/"
+        },
+        {
+          "name": "USDA-NRCS [Imagery]",
+          "type": "esri-group",
+          "url": "https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "USDA-NRCS [Easements]",
+          "type": "esri-group",
+          "url": "https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "Nature Conservancy [LandScope]",
+          "type": "esri-group",
+          "url": "https://geohub-natureserve.opendata.arcgis.com/"
+        },
+        {
+          "name": "HUD [eGIS]",
+          "type": "esri-group",
+          "url": "https://egis.hud.gov/arcgis/rest/services/"
+        },
+        {
+          "name": "DOC-NOAA [Coastal Flooding]",
+          "type": "esri-group",
+          "url": "https://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/"
+        },
+        {
+          "name": "USDA-USFS",
+          "type": "esri-group",
+          "url": "https://apps.fs.usda.gov/arcx/rest/services/"
+        }
+      ]
+    }
+  ]
+}
